@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto" data-theme="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>하드웨어 키매핑의 편리함 | Winkeyless blog</title>
 <meta name="keywords" content="">
 <meta name="description" content="지금 다니는 회사는 IOS와 안드로이드를 함께 개발하기에 개발자들은 대부분 맥북을 사용합니다. 저도 분위기에 맞춰 맥북을 쓰지요. 맥북의 키보드도 좋다고는 하지만 제 손에는 맞지 않을 것이 뻔하므로 출근 첫 날 부터 키보드를 준비해갔죠 ㅎ
 구형 A.87을 ps2avr로 개조한 기판을 사용한 아크릴 하우징 키보드를 사용했습니다. 이때는 PS/2였기 때문에 카제 컨버터를 이용했었죠. 얼마전부터는 거기에 부트로더를 설치하고 ps2avrU 펌웨어를 업로드한 후 확장 모듈과 함께 USB로 연결하여사용하고 있습니다. 맥에서도 아무런 문제없이 잘 작동하네요 ㅎ
 그런데, 오늘에서야 백슬래시 키가 입력이 안되는 것을 알게 됐습니다. 납땜 문제인가 싶어서 xcode에서 코딩하다말고 키매핑으로 진입한 후 col, row 값을 확인해보니 이상이 없더군요. 문득 생각난 것은 이 구형 기판은 백슬래시의 매트릭스상 위치가 요즘 것과 다르다는 것이었습니다. 깜빡하고 이걸 변경하지 않고 A.87U 기판의 펌웨어를 사용했던 거죠. 하지만, 바로 백슬래시를 매핑 해주고 아무 문제없이 잘 사용했습니다 ㅎ">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/36/">
+<link rel="canonical" href="https://blog.winkeyless.kr/36/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.343cc480b9ffc8f04ccbe5e968ad674880cab773ec19905e93033065c1e7a804.css" integrity="sha256-NDzEgLn/yPBMy&#43;XpaK1nSIDKt3PsGZBekwMwZcHnqAQ=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<link rel="icon" href="https://blog.winkeyless.kr/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://blog.winkeyless.kr/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://blog.winkeyless.kr/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://blog.winkeyless.kr/apple-touch-icon.png">
+<link rel="mask-icon" href="https://blog.winkeyless.kr/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/36/">
+<link rel="alternate" hreflang="en" href="https://blog.winkeyless.kr/36/">
 <noscript>
     <style>
         #theme-toggle,
@@ -72,13 +72,79 @@
         document.querySelector("html").dataset.theme = 'light';
     }
 
+</script><meta property="og:url" content="https://blog.winkeyless.kr/36/">
+  <meta property="og:site_name" content="Winkeyless blog">
+  <meta property="og:title" content="하드웨어 키매핑의 편리함">
+  <meta property="og:description" content="지금 다니는 회사는 IOS와 안드로이드를 함께 개발하기에 개발자들은 대부분 맥북을 사용합니다. 저도 분위기에 맞춰 맥북을 쓰지요. 맥북의 키보드도 좋다고는 하지만 제 손에는 맞지 않을 것이 뻔하므로 출근 첫 날 부터 키보드를 준비해갔죠 ㅎ
+구형 A.87을 ps2avr로 개조한 기판을 사용한 아크릴 하우징 키보드를 사용했습니다. 이때는 PS/2였기 때문에 카제 컨버터를 이용했었죠. 얼마전부터는 거기에 부트로더를 설치하고 ps2avrU 펌웨어를 업로드한 후 확장 모듈과 함께 USB로 연결하여사용하고 있습니다. 맥에서도 아무런 문제없이 잘 작동하네요 ㅎ
+그런데, 오늘에서야 백슬래시 키가 입력이 안되는 것을 알게 됐습니다. 납땜 문제인가 싶어서 xcode에서 코딩하다말고 키매핑으로 진입한 후 col, row 값을 확인해보니 이상이 없더군요. 문득 생각난 것은 이 구형 기판은 백슬래시의 매트릭스상 위치가 요즘 것과 다르다는 것이었습니다. 깜빡하고 이걸 변경하지 않고 A.87U 기판의 펌웨어를 사용했던 거죠. 하지만, 바로 백슬래시를 매핑 해주고 아무 문제없이 잘 사용했습니다 ㅎ">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2013-09-04T23:42:10+09:00">
+    <meta property="article:modified_time" content="2013-09-04T23:42:10+09:00">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="하드웨어 키매핑의 편리함">
+<meta name="twitter:description" content="지금 다니는 회사는 IOS와 안드로이드를 함께 개발하기에 개발자들은 대부분 맥북을 사용합니다. 저도 분위기에 맞춰 맥북을 쓰지요. 맥북의 키보드도 좋다고는 하지만 제 손에는 맞지 않을 것이 뻔하므로 출근 첫 날 부터 키보드를 준비해갔죠 ㅎ
+구형 A.87을 ps2avr로 개조한 기판을 사용한 아크릴 하우징 키보드를 사용했습니다. 이때는 PS/2였기 때문에 카제 컨버터를 이용했었죠. 얼마전부터는 거기에 부트로더를 설치하고 ps2avrU 펌웨어를 업로드한 후 확장 모듈과 함께 USB로 연결하여사용하고 있습니다. 맥에서도 아무런 문제없이 잘 작동하네요 ㅎ
+그런데, 오늘에서야 백슬래시 키가 입력이 안되는 것을 알게 됐습니다. 납땜 문제인가 싶어서 xcode에서 코딩하다말고 키매핑으로 진입한 후 col, row 값을 확인해보니 이상이 없더군요. 문득 생각난 것은 이 구형 기판은 백슬래시의 매트릭스상 위치가 요즘 것과 다르다는 것이었습니다. 깜빡하고 이걸 변경하지 않고 A.87U 기판의 펌웨어를 사용했던 거죠. 하지만, 바로 백슬래시를 매핑 해주고 아무 문제없이 잘 사용했습니다 ㅎ">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://blog.winkeyless.kr/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "하드웨어 키매핑의 편리함",
+      "item": "https://blog.winkeyless.kr/36/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "하드웨어 키매핑의 편리함",
+  "name": "하드웨어 키매핑의 편리함",
+  "description": "지금 다니는 회사는 IOS와 안드로이드를 함께 개발하기에 개발자들은 대부분 맥북을 사용합니다. 저도 분위기에 맞춰 맥북을 쓰지요. 맥북의 키보드도 좋다고는 하지만 제 손에는 맞지 않을 것이 뻔하므로 출근 첫 날 부터 키보드를 준비해갔죠 ㅎ\n구형 A.87을 ps2avr로 개조한 기판을 사용한 아크릴 하우징 키보드를 사용했습니다. 이때는 PS/2였기 때문에 카제 컨버터를 이용했었죠. 얼마전부터는 거기에 부트로더를 설치하고 ps2avrU 펌웨어를 업로드한 후 확장 모듈과 함께 USB로 연결하여사용하고 있습니다. 맥에서도 아무런 문제없이 잘 작동하네요 ㅎ\n그런데, 오늘에서야 백슬래시 키가 입력이 안되는 것을 알게 됐습니다. 납땜 문제인가 싶어서 xcode에서 코딩하다말고 키매핑으로 진입한 후 col, row 값을 확인해보니 이상이 없더군요. 문득 생각난 것은 이 구형 기판은 백슬래시의 매트릭스상 위치가 요즘 것과 다르다는 것이었습니다. 깜빡하고 이걸 변경하지 않고 A.87U 기판의 펌웨어를 사용했던 거죠. 하지만, 바로 백슬래시를 매핑 해주고 아무 문제없이 잘 사용했습니다 ㅎ\n",
+  "keywords": [
+    
+  ],
+  "articleBody": "지금 다니는 회사는 IOS와 안드로이드를 함께 개발하기에 개발자들은 대부분 맥북을 사용합니다. 저도 분위기에 맞춰 맥북을 쓰지요. 맥북의 키보드도 좋다고는 하지만 제 손에는 맞지 않을 것이 뻔하므로 출근 첫 날 부터 키보드를 준비해갔죠 ㅎ\n구형 A.87을 ps2avr로 개조한 기판을 사용한 아크릴 하우징 키보드를 사용했습니다. 이때는 PS/2였기 때문에 카제 컨버터를 이용했었죠. 얼마전부터는 거기에 부트로더를 설치하고 ps2avrU 펌웨어를 업로드한 후 확장 모듈과 함께 USB로 연결하여사용하고 있습니다. 맥에서도 아무런 문제없이 잘 작동하네요 ㅎ\n그런데, 오늘에서야 백슬래시 키가 입력이 안되는 것을 알게 됐습니다. 납땜 문제인가 싶어서 xcode에서 코딩하다말고 키매핑으로 진입한 후 col, row 값을 확인해보니 이상이 없더군요. 문득 생각난 것은 이 구형 기판은 백슬래시의 매트릭스상 위치가 요즘 것과 다르다는 것이었습니다. 깜빡하고 이걸 변경하지 않고 A.87U 기판의 펌웨어를 사용했던 거죠. 하지만, 바로 백슬래시를 매핑 해주고 아무 문제없이 잘 사용했습니다 ㅎ\n인터페이스나 OS의 구분이 없고 소프트웨어도 필요없이 자유롭게 키 매핑을 할 수 있는 것이 하드웨어 키매핑의 가장 큰 장점이 아닌가 싶네요.\n",
+  "wordCount" : "144",
+  "inLanguage": "en",
+  "datePublished": "2013-09-04T23:42:10+09:00",
+  "dateModified": "2013-09-04T23:42:10+09:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://blog.winkeyless.kr/36/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Winkeyless blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://blog.winkeyless.kr/favicon.ico"
+    }
+  }
+}
 </script>
 </head>
 <body id="top">
     <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="Winkeyless blog (Alt + H)">Winkeyless blog</a>
+            <a href="https://blog.winkeyless.kr/" accesskey="h" title="Winkeyless blog (Alt + H)">Winkeyless blog</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -104,12 +170,12 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/" title="Winkeyless blog">
+                <a href="https://blog.winkeyless.kr/" title="Winkeyless blog">
                     <span>Home</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/categories" title="Category">
+                <a href="https://blog.winkeyless.kr/categories" title="Category">
                     <span>Category</span>
                 </a>
             </li>
@@ -144,7 +210,7 @@
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="http://localhost:1313/">Winkeyless blog</a></span> · 
+        <span>&copy; 2025 <a href="https://blog.winkeyless.kr/">Winkeyless blog</a></span> · 
 
     <span>
         Powered by

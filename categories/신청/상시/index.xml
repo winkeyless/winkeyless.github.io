@@ -2,36 +2,36 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>신청/상시 on Winkeyless blog</title>
-    <link>http://localhost:1313/categories/%EC%8B%A0%EC%B2%AD/%EC%83%81%EC%8B%9C/</link>
+    <link>https://blog.winkeyless.kr/categories/%EC%8B%A0%EC%B2%AD/%EC%83%81%EC%8B%9C/</link>
     <description>Recent content in 신청/상시 on Winkeyless blog</description>
     <generator>Hugo -- 0.152.2</generator>
     <language>ko_KR</language>
     <lastBuildDate>Wed, 25 Jun 2014 01:37:57 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/%EC%8B%A0%EC%B2%AD/%EC%83%81%EC%8B%9C/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.winkeyless.kr/categories/%EC%8B%A0%EC%B2%AD/%EC%83%81%EC%8B%9C/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>기타 부자재 판매</title>
-      <link>http://localhost:1313/161/</link>
+      <link>https://blog.winkeyless.kr/161/</link>
       <pubDate>Wed, 25 Jun 2014 01:37:57 +0900</pubDate>
-      <guid>http://localhost:1313/161/</guid>
+      <guid>https://blog.winkeyless.kr/161/</guid>
       <description>&lt;p&gt;키 입력을 위해서 다이오드는 필수 입니다.&lt;/p&gt;
 &lt;p&gt;저항은 full LED를 이용할 경우 필요합니다.&lt;/p&gt;
 &lt;p&gt;SMD 다이오드(1N4148W)&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;DSC_0535.jpg&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/161/attachments/DSC_0535.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;DSC_0535.jpg&#34; loading=&#34;lazy&#34; src=&#34;https://blog.winkeyless.kr/161/attachments/DSC_0535.jpg&#34;&gt;&lt;/p&gt;
 &lt;p&gt;SMD 다이오드(LL4148)&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;DSC_0534.jpg&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/161/attachments/DSC_0534.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;DSC_0534.jpg&#34; loading=&#34;lazy&#34; src=&#34;https://blog.winkeyless.kr/161/attachments/DSC_0534.jpg&#34;&gt;&lt;/p&gt;
 &lt;p&gt;- 두 다이오드 간 성능 차이는 없으며, 자신이 납땜하기에 편한 모양으로 선택하면 됩니다.&lt;/p&gt;
 &lt;p&gt;2012 칩 저항&lt;/p&gt;
 &lt;p&gt;820옴 : 보통 흰색/핑크 컬러 LED에 사용&lt;/p&gt;
 &lt;p&gt;910옴 : 보통 파란색/녹색 LED에 사용&lt;/p&gt;
 &lt;p&gt;1300옴 : 보통 빨간색/노란색/주황 LED에 사용&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;DSC_0805.jpg&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/161/attachments/DSC_0805.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;DSC_0805.jpg&#34; loading=&#34;lazy&#34; src=&#34;https://blog.winkeyless.kr/161/attachments/DSC_0805.jpg&#34;&gt;&lt;/p&gt;
 &lt;p&gt;3파이 LED나 사각LED(일명 메가톤바)에 비해 모따기 등의 가공이 필요없이 납땜만 하면 사용할 수 있는 최신 트랜드의 LED입니다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>B 시리즈 펌웨어 기본 소자 및 RGB 관련 소자 신청</title>
-      <link>http://localhost:1313/160/</link>
+      <link>https://blog.winkeyless.kr/160/</link>
       <pubDate>Wed, 25 Jun 2014 01:35:07 +0900</pubDate>
-      <guid>http://localhost:1313/160/</guid>
+      <guid>https://blog.winkeyless.kr/160/</guid>
       <description>&lt;p&gt;- B 시리즈 기판에는 ps2avrGB 소자 세트가 기본적으로 포함되어 습니다. 다만, 추가로 소자 세트가 필요할 때 주문하면 됩니다.&lt;/p&gt;
 &lt;p&gt;RGB LED 기본 소자 세트는 포함되어 있지 않습니다만, 기판 주문시 옵션으로 선택할 수 있습니다.&lt;/p&gt;
 &lt;p&gt;(기판 주문 시 옵션으로 선택해야 기판의 크기에 맞는 LED의 수가 포함되며 이 신청서로 별도 구매 시 아래와 같이 LED 수가 정해져 있습니다.)&lt;/p&gt;
@@ -45,15 +45,15 @@
     </item>
     <item>
       <title>B 시리즈 기판 신청</title>
-      <link>http://localhost:1313/159/</link>
+      <link>https://blog.winkeyless.kr/159/</link>
       <pubDate>Wed, 25 Jun 2014 01:30:51 +0900</pubDate>
-      <guid>http://localhost:1313/159/</guid>
-      <description>&lt;p&gt;&lt;img alt=&#34;DSC_0463.jpg&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/159/attachments/DSC_0463.jpg&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;DSC_0365.jpg&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/159/attachments/DSC_0365.jpg&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;DSC_0416.jpg&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/159/attachments/DSC_0416.jpg&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;DSC_0408.jpg&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/159/attachments/DSC_0408.jpg&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;DSC_0484.jpg&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/159/attachments/DSC_0484.jpg&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;DSC_0495.jpg&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/159/attachments/DSC_0495.jpg&#34;&gt;&lt;/p&gt;
+      <guid>https://blog.winkeyless.kr/159/</guid>
+      <description>&lt;p&gt;&lt;img alt=&#34;DSC_0463.jpg&#34; loading=&#34;lazy&#34; src=&#34;https://blog.winkeyless.kr/159/attachments/DSC_0463.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;DSC_0365.jpg&#34; loading=&#34;lazy&#34; src=&#34;https://blog.winkeyless.kr/159/attachments/DSC_0365.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;DSC_0416.jpg&#34; loading=&#34;lazy&#34; src=&#34;https://blog.winkeyless.kr/159/attachments/DSC_0416.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;DSC_0408.jpg&#34; loading=&#34;lazy&#34; src=&#34;https://blog.winkeyless.kr/159/attachments/DSC_0408.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;DSC_0484.jpg&#34; loading=&#34;lazy&#34; src=&#34;https://blog.winkeyless.kr/159/attachments/DSC_0484.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;DSC_0495.jpg&#34; loading=&#34;lazy&#34; src=&#34;https://blog.winkeyless.kr/159/attachments/DSC_0495.jpg&#34;&gt;&lt;/p&gt;
 &lt;p&gt;B 시리즈 기판들은 컬러를 자유롭게 변환할 수 있는 특수한 RGB LED를 사용할 수 있는 것이 가장 큰 특징입니다.&lt;/p&gt;
 &lt;p&gt;또한, PC용 클라이언트(bootMapper Client) 애플리케이션을 이용해서 자유롭게 설정이 가능합니다.&lt;/p&gt;
 &lt;p&gt;새로운 펌웨어인 ps2avrGB 는 기존의 ps2avrU와 대부분의 기능은 동일하며 여기에 RGB LED 컨트롤 기능을 추가한 것 입니다.&lt;/p&gt;
@@ -70,12 +70,12 @@
     </item>
     <item>
       <title>MX-miniU EX 기판 및 소자 신청</title>
-      <link>http://localhost:1313/145/</link>
+      <link>https://blog.winkeyless.kr/145/</link>
       <pubDate>Wed, 16 Apr 2014 01:32:13 +0900</pubDate>
-      <guid>http://localhost:1313/145/</guid>
-      <description>&lt;p&gt;&lt;img alt=&#34;DSC_9778.jpg&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/145/attachments/DSC_9778.jpg&#34;&gt;&lt;/p&gt;
+      <guid>https://blog.winkeyless.kr/145/</guid>
+      <description>&lt;p&gt;&lt;img alt=&#34;DSC_9778.jpg&#34; loading=&#34;lazy&#34; src=&#34;https://blog.winkeyless.kr/145/attachments/DSC_9778.jpg&#34;&gt;&lt;/p&gt;
 &lt;p&gt;지원하는 배열은 다음과 같습니다.&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;mxminiu_ex.jpg&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/145/attachments/mxminiu_ex.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;mxminiu_ex.jpg&#34; loading=&#34;lazy&#34; src=&#34;https://blog.winkeyless.kr/145/attachments/mxminiu_ex.jpg&#34;&gt;&lt;/p&gt;
 &lt;p&gt;기존의 윈키 배열인&lt;/p&gt;
 &lt;p&gt;1.25, 1, 1.25, 6.25, 1.25, 1, 1&lt;/p&gt;
 &lt;p&gt;에서&lt;/p&gt;
@@ -88,12 +88,12 @@
     </item>
     <item>
       <title>U.CON PCB 및 소자 신청</title>
-      <link>http://localhost:1313/89/</link>
+      <link>https://blog.winkeyless.kr/89/</link>
       <pubDate>Mon, 18 Nov 2013 22:38:25 +0900</pubDate>
-      <guid>http://localhost:1313/89/</guid>
-      <description>&lt;p&gt;&lt;img alt=&#34;DSC_9621.jpg&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/89/attachments/DSC_9621.jpg&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;DSC_9622.jpg&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/89/attachments/DSC_9622.jpg&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;DSC_9623.jpg&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/89/attachments/DSC_9623.jpg&#34;&gt;&lt;/p&gt;
+      <guid>https://blog.winkeyless.kr/89/</guid>
+      <description>&lt;p&gt;&lt;img alt=&#34;DSC_9621.jpg&#34; loading=&#34;lazy&#34; src=&#34;https://blog.winkeyless.kr/89/attachments/DSC_9621.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;DSC_9622.jpg&#34; loading=&#34;lazy&#34; src=&#34;https://blog.winkeyless.kr/89/attachments/DSC_9622.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;DSC_9623.jpg&#34; loading=&#34;lazy&#34; src=&#34;https://blog.winkeyless.kr/89/attachments/DSC_9623.jpg&#34;&gt;&lt;/p&gt;
 &lt;p&gt;오래되었거나 기존 컨트롤러 고장 등의 이유로 사용할 수 없는 기판에 와이어링해서 키보드로 작동시키게 하는 커스텀 컨트롤러입니다. 기본 기능은 ps2avrU 기능과 동일합니다.&lt;/p&gt;
 &lt;p&gt;PCB&lt;/p&gt;
 &lt;p&gt;- 컬러 : 녹색&lt;/p&gt;
@@ -106,10 +106,10 @@
     </item>
     <item>
       <title>A.87U EX 기판 및 소자 신청</title>
-      <link>http://localhost:1313/79/</link>
+      <link>https://blog.winkeyless.kr/79/</link>
       <pubDate>Tue, 05 Nov 2013 16:30:51 +0900</pubDate>
-      <guid>http://localhost:1313/79/</guid>
-      <description>&lt;p&gt;&lt;img alt=&#34;DSC_9635.jpg&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/79/attachments/DSC_9635.jpg&#34;&gt;&lt;/p&gt;
+      <guid>https://blog.winkeyless.kr/79/</guid>
+      <description>&lt;p&gt;&lt;img alt=&#34;DSC_9635.jpg&#34; loading=&#34;lazy&#34; src=&#34;https://blog.winkeyless.kr/79/attachments/DSC_9635.jpg&#34;&gt;&lt;/p&gt;
 &lt;p&gt;(사진상 땜 부위가 금색으로 보여지는데 실제로는 은색-납도금입니다.)&lt;/p&gt;
 &lt;p&gt;기판 사양&lt;/p&gt;
 &lt;p&gt;- 레이아웃 : 윈키/윈키리스 콤보,&lt;/p&gt;
@@ -127,11 +127,11 @@
     </item>
     <item>
       <title>ThumbU 기판 및 소자 신청</title>
-      <link>http://localhost:1313/74/</link>
+      <link>https://blog.winkeyless.kr/74/</link>
       <pubDate>Tue, 29 Oct 2013 20:42:34 +0900</pubDate>
-      <guid>http://localhost:1313/74/</guid>
+      <guid>https://blog.winkeyless.kr/74/</guid>
       <description>&lt;p&gt;ThumbU의 신청 포스트입니다.&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;DSC_9575.jpg&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/74/attachments/DSC_9575.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;DSC_9575.jpg&#34; loading=&#34;lazy&#34; src=&#34;https://blog.winkeyless.kr/74/attachments/DSC_9575.jpg&#34;&gt;&lt;/p&gt;
 &lt;p&gt;기판 사양&lt;/p&gt;
 &lt;p&gt;- 레이아웃 : 윈키/윈키리스/HHKB-MX 지원&lt;/p&gt;
 &lt;p&gt;캡스락 3000/8000(마제식) 지원&lt;/p&gt;
@@ -148,13 +148,13 @@
     </item>
     <item>
       <title>FaceU 기판 및 소자 신청</title>
-      <link>http://localhost:1313/65/</link>
+      <link>https://blog.winkeyless.kr/65/</link>
       <pubDate>Wed, 16 Oct 2013 17:58:21 +0900</pubDate>
-      <guid>http://localhost:1313/65/</guid>
+      <guid>https://blog.winkeyless.kr/65/</guid>
       <description>&lt;p&gt;FaceU의 신청 포스트입니다.&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;DSC_9976.jpg&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/65/attachments/DSC_9976.jpg&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;DSC_9979.jpg&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/65/attachments/DSC_9979.jpg&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;DSC_9983.jpg&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/65/attachments/DSC_9983.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;DSC_9976.jpg&#34; loading=&#34;lazy&#34; src=&#34;https://blog.winkeyless.kr/65/attachments/DSC_9976.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;DSC_9979.jpg&#34; loading=&#34;lazy&#34; src=&#34;https://blog.winkeyless.kr/65/attachments/DSC_9979.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;DSC_9983.jpg&#34; loading=&#34;lazy&#34; src=&#34;https://blog.winkeyless.kr/65/attachments/DSC_9983.jpg&#34;&gt;&lt;/p&gt;
 &lt;p&gt;기판 사양&lt;/p&gt;
 &lt;dl&gt;
 &lt;dt&gt;- 레이아웃&lt;/dt&gt;
@@ -186,12 +186,12 @@
     </item>
     <item>
       <title>A.87U 기판 및 소자 신청</title>
-      <link>http://localhost:1313/63/</link>
+      <link>https://blog.winkeyless.kr/63/</link>
       <pubDate>Sat, 12 Oct 2013 02:55:18 +0900</pubDate>
-      <guid>http://localhost:1313/63/</guid>
+      <guid>https://blog.winkeyless.kr/63/</guid>
       <description>&lt;p&gt;A.87U의 신청 포스트입니다.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;(참고용 사진 입니다. 현재 기판의 컬러는 녹색 이므로 유의하세요.)&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;DSC_9827.jpg&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/63/attachments/DSC_9827.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;DSC_9827.jpg&#34; loading=&#34;lazy&#34; src=&#34;https://blog.winkeyless.kr/63/attachments/DSC_9827.jpg&#34;&gt;&lt;/p&gt;
 &lt;p&gt;기판 사양&lt;/p&gt;
 &lt;dl&gt;
 &lt;dt&gt;- 레이아웃&lt;/dt&gt;
@@ -227,11 +227,11 @@
     </item>
     <item>
       <title>MX-miniU 기판 및 소자 신청</title>
-      <link>http://localhost:1313/62/</link>
+      <link>https://blog.winkeyless.kr/62/</link>
       <pubDate>Sat, 12 Oct 2013 02:47:32 +0900</pubDate>
-      <guid>http://localhost:1313/62/</guid>
+      <guid>https://blog.winkeyless.kr/62/</guid>
       <description>&lt;p&gt;MX-miniU의 신청 포스트입니다.&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;DSC_9522.jpg&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/62/attachments/DSC_9522.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;DSC_9522.jpg&#34; loading=&#34;lazy&#34; src=&#34;https://blog.winkeyless.kr/62/attachments/DSC_9522.jpg&#34;&gt;&lt;/p&gt;
 &lt;p&gt;기판 사양&lt;/p&gt;
 &lt;p&gt;- 레이아웃 : 윈키/윈키리스 콤보,&lt;/p&gt;
 &lt;p&gt;캡스락 3000/8000(마제식) 지원&lt;/p&gt;
@@ -248,9 +248,9 @@
     </item>
     <item>
       <title>ps2avrU 소자 셋 신청</title>
-      <link>http://localhost:1313/49/</link>
+      <link>https://blog.winkeyless.kr/49/</link>
       <pubDate>Tue, 01 Oct 2013 23:52:38 +0900</pubDate>
-      <guid>http://localhost:1313/49/</guid>
+      <guid>https://blog.winkeyless.kr/49/</guid>
       <description>&lt;p&gt;ps2avrU 시리즈에 사용되는 소자 셋 입니다.&lt;/p&gt;
 &lt;h3 id=&#34;소자-목록&#34;&gt;소자 목록&lt;/h3&gt;
 &lt;p&gt;12종 19개&lt;/p&gt;
