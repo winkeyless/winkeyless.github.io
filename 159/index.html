@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>B 시리즈 기판 신청 | Winkeyless blog</title>
+<meta name="keywords" content="">
+<meta name="description" content="
+
+
+
+
+
+B 시리즈 기판들은 컬러를 자유롭게 변환할 수 있는 특수한 RGB LED를 사용할 수 있는 것이 가장 큰 특징입니다.
+또한, PC용 클라이언트(bootMapper Client) 애플리케이션을 이용해서 자유롭게 설정이 가능합니다.
+새로운 펌웨어인 ps2avrGB 는 기존의 ps2avrU와 대부분의 기능은 동일하며 여기에 RGB LED 컨트롤 기능을 추가한 것 입니다.
+아크릴 하우징도 쉽게 주문/제작 할 수 있습니다.
+아크릴 하우징 주문 : http://hanaacryl.com/product/?s_category=150
+기판 사양
+
+- 레이아웃 (공통)
+
+윈키/윈키리스 콤보,
+
+
+캡스락 3000/8000(마제식) 지원">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/159/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.343cc480b9ffc8f04ccbe5e968ad674880cab773ec19905e93033065c1e7a804.css" integrity="sha256-NDzEgLn/yPBMy&#43;XpaK1nSIDKt3PsGZBekwMwZcHnqAQ=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/159/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Winkeyless blog (Alt + H)">Winkeyless blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="Winkeyless blog">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/categories" title="Category">
+                    <span>Category</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      B 시리즈 기판 신청
+    </h1>
+    <div class="post-meta"><span title='2014-06-25 01:30:51 +0900 KST'>June 25, 2014</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p><img alt="DSC_0463.jpg" loading="lazy" src="/159/attachments/DSC_0463.jpg"></p>
+<p><img alt="DSC_0365.jpg" loading="lazy" src="/159/attachments/DSC_0365.jpg"></p>
+<p><img alt="DSC_0416.jpg" loading="lazy" src="/159/attachments/DSC_0416.jpg"></p>
+<p><img alt="DSC_0408.jpg" loading="lazy" src="/159/attachments/DSC_0408.jpg"></p>
+<p><img alt="DSC_0484.jpg" loading="lazy" src="/159/attachments/DSC_0484.jpg"></p>
+<p><img alt="DSC_0495.jpg" loading="lazy" src="/159/attachments/DSC_0495.jpg"></p>
+<p>B 시리즈 기판들은 컬러를 자유롭게 변환할 수 있는 특수한 RGB LED를 사용할 수 있는 것이 가장 큰 특징입니다.</p>
+<p>또한, PC용 클라이언트(bootMapper Client) 애플리케이션을 이용해서 자유롭게 설정이 가능합니다.</p>
+<p>새로운 펌웨어인 ps2avrGB 는 기존의 ps2avrU와 대부분의 기능은 동일하며 여기에 RGB LED 컨트롤 기능을 추가한 것 입니다.</p>
+<p>아크릴 하우징도 쉽게 주문/제작 할 수 있습니다.</p>
+<p>아크릴 하우징 주문 : <a href="http://hanaacryl.com/product/?s_category=150">http://hanaacryl.com/product/?s_category=150</a></p>
+<p>기판 사양</p>
+<dl>
+<dt>- 레이아웃 (공통)</dt>
+<dd>
+<p>윈키/윈키리스 콤보,</p>
+</dd>
+<dd>
+<p>캡스락 3000/8000(마제식) 지원</p>
+</dd>
+<dd>
+<p>스페이스바 마제식 지원</p>
+</dd>
+<dd>
+<p>1.75 우 쉬프트 지원</p>
+</dd>
+<dd>
+<p>ISO 배열 지원</p>
+</dd>
+<dt>- 레이아웃 (B.87 EX)</dt>
+<dd>
+<p>텐키 분리 가능</p>
+</dd>
+<dd>
+<p>텐키의 2X키를 1X * 2개로 대체 가능</p>
+</dd>
+</dl>
+<p>- RGB LED 지원 : 대부분의 컬러로 자유롭게 변환 가능(옵션으로 RGB LED 소자 세트 구매)</p>
+<p>- Full LED 지원 : 5가지 LED 모드</p>
+<p>- PCB : 1.6T (화이트 컬러)</p>
+<p>- 모든 소자 뒷면에 배치</p>
+<p>- 하우징(보강판)리스를 위한 마운트홀 지원</p>
+<p>- mac os 호환</p>
+<p>ps2avrGB는 하드웨어 키매핑을 제외한 모든 기능이 ps2avrU와 동일합니다.</p>
+<p>또한, bootmapper client를 제공하여 LED 설정을 PC에서 손쉽게 변경할 수 있습니다.</p>
+<p>ps2avrGB 기능</p>
+<p>- RGB LED 컨트롤</p>
+<p>- 간단한 키 맵핑 / 매크로 등록</p>
+<p>ps2avrU(펌웨어) 사양</p>
+<p>- 인터페이스 : USB / PS/2 콤보 (자동 인식)</p>
+<p>- 무한 동시입력 지원 (PS/2, USB연결 시 6+1입력)</p>
+<p>- Full LED 지원 : 5가지 LED 모드</p>
+<p>- 4 레이어의 키맵 지원</p>
+<p>- 각종 멀티미디어 키 지원</p>
+<p>- 다양한 특수 기능(퀵 스왑/듀얼 액션 등) 지원</p>
+<p>- 매크로 지원 (키 입력간 지연 가능)</p>
+<p>- 간단한 키 맵핑 지원</p>
+<p>- mac os 호환</p>
+<p>펌웨어에대한 더 많은 정보는 아래 링크를 참고하세요.</p>
+<p>ps2avrU : <a href="http://blog.winkeyless.kr/19">http://blog.winkeyless.kr/19</a></p>
+<p>ps2avrGB : <a href="http://blog.winkeyless.kr/156">http://blog.winkeyless.kr/156</a></p>
+<p>아래 링크로 신청해주시길 바랍니다.</p>
+<p>B.87</p>
+<p>- 텐키리스 사이즈</p>
+<p>- 44,000원(부가세 포함)</p>
+<p>B.87 EX</p>
+<p>- 풀 배열 사이즈</p>
+<p>- 49,000원(부가세 포함)</p>
+<p>B.pad</p>
+<p>- 텐키 사이즈</p>
+<p>- 24,000원</p>
+<p>B.face</p>
+<p>- 포커(60%) 사이즈</p>
+<p>- 포커X 하우징 호환 기판</p>
+<p>- 39,000원</p>
+<p>B.thumb</p>
+<p>- 포커(60%) 사이즈</p>
+<p>- micro USB 커넥터</p>
+<p>- PCB 두께 : 1.0T</p>
+<p>- 39,000원</p>
+<p>B.mini</p>
+<p>- MX-mini 배열</p>
+<p>- 39,000원</p>
+<p>B.mini EX</p>
+<p>- MX-mini 배열 + tenkey</p>
+<p>- 44,000원</p>
+<p><strong>* RGB LED 및 컨트롤러(sub MCU)와 관련 소자는 옵션으로 구매를 해야 합니다.</strong></p>
+<p><strong>* 기판 및 소자는 미조립으로 배송 되므로 납땜을 원하시면 &ldquo;기본 소자 납땜 및 펌업&rdquo; 옵션을 선택하셔야 합니다.</strong></p>
+<p>RGB LED 기본 세트</p>
+<p>- 기판에 맞는 수의 RGB LED</p>
+<p>- sub MCU (RGB 컨트롤러)</p>
+<p>- 기타 소자</p>
+<p><img alt="DSC_0578.jpg" loading="lazy" src="/159/attachments/DSC_0578.jpg"></p>
+<p>추가 RGB LED</p>
+<p>- 만약, RGB LED가 더 필요하다면 추가 할 수 있습니다.</p>
+<p>- 납땜이 어렵기 때문에 되도록이면 아래의 RGB bar를 이용하시길 바랍니다.</p>
+<p>RGB bar</p>
+<p>- 하단의 RGB 효과를 추가 할 수 있습니다.</p>
+<p>- 신청 수 만큼 연결된 형태로 배송 됩니다. (만약, 10을 입력하면 10개가 연결된 형태로 배송됩니다.)</p>
+<p>- PCB 컬러는 흰색 입니다.</p>
+<p>- 연결 방법 : <a href="http://blog.winkeyless.kr/169">http://blog.winkeyless.kr/169</a></p>
+<p>- 기판 별 RGB bar 권장 길이</p>
+<p>B.87 EX : 12</p>
+<p>B.87 : 10</p>
+<p>B.mini EX : 11</p>
+<p>B.mini : 9 (PCB에는 8개 이지만 간격이 달라서 9개가 딱 맞습니다.)</p>
+<p>B.face : 8</p>
+<p>B.thumb : 8</p>
+<p>B.pad : 2</p>
+<p><img alt="DSC_0808.jpg" loading="lazy" src="/159/attachments/DSC_0808.jpg"></p>
+<p>볼트/너트/범폰 셋</p>
+<p>- 하나 아크릴에 등록되어 있는 아크릴 하우징에 사용되는 부자재 입니다.</p>
+<p>(공통으로 롱 너트 18개, 접시머리 렌치볼트 M3*6mm 30개, M3*12mm 4개, 3M 범폰 6개 입니다. 풀 배열 1대를 조립할 수 있는 수 입니다.)</p>
+<p><img alt="DSC_0581.jpg" loading="lazy" src="/159/attachments/DSC_0581.jpg"></p>
+<p><img alt="DSC_0582.jpg" loading="lazy" src="/159/attachments/DSC_0582.jpg"></p>
+<p>- B.pad 와 볼트 세트를 함께 주문하면 아래의 B.pad 전용 범폰도 포함됩니다.</p>
+<p><img alt="DSC_0583.jpg" loading="lazy" src="/159/attachments/DSC_0583.jpg"></p>
+<p>RGB LED 및 관련 소자 납땜 : 장 당 4천원</p>
+<p>기본 소자 납땜 및 펌업 : 장 당 5천원</p>
+<p>- 펌웨어 관련 소자는 초보자가 납땜하기에 어려우므로 염두해두세요.</p>
+<p>- 기판 납땜 가이드 : <a href="http://blog.winkeyless.kr/158">http://blog.winkeyless.kr/158</a></p>
+<p>부자재</p>
+<p>- 기판의 동작에 반드시 필요한 다이오드를 함께 주문할 수 있습니다.</p>
+<p>- LED와 저항도 주문 가능합니다.</p>
+<h3 id="-rgb-led의-납땜에는-350도-이상의-온도를-사용할-수-있는-고열량의-인두기가-필요합니다">* RGB LED의 납땜에는 350도 이상의 온도를 사용할 수 있는 고열량의 인두기가 필요합니다.<a hidden class="anchor" aria-hidden="true" href="#-rgb-led의-납땜에는-350도-이상의-온도를-사용할-수-있는-고열량의-인두기가-필요합니다">#</a></h3>
+<h3 id="-기판의-컬러는-공제품의-여분은-흰색이며-이후-제작되는-경우에는-기본-컬러인-녹색입니다">* 기판의 컬러는 공제품의 여분은 흰색이며 이후 제작되는 경우에는 기본 컬러인 녹색입니다.<a hidden class="anchor" aria-hidden="true" href="#-기판의-컬러는-공제품의-여분은-흰색이며-이후-제작되는-경우에는-기본-컬러인-녹색입니다">#</a></h3>
+<p>- 주문 링크 : <a href="http://winkeyless.kr/store/">http://winkeyless.kr/store/</a></p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">Winkeyless blog</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

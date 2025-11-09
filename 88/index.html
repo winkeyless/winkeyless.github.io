@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>U.CON 테스트 완료 | Winkeyless blog</title>
+<meta name="keywords" content="">
+<meta name="description" content="U.CON을 제대로 테스트 하기 위해서 잠자던 초호기(?)를 꺼냈습니다.
+처음이자 마지막으로 풀 와이어링을 해서 만든 해피형 키보드 입니다. 저는 이놈을 만들고 난 후 기판 그리기를 익히기 시작했습니다. 다시는 풀 와이어링은 하지 않겠다는 다짐을 하면서&hellip;
+
+아이콘의 전신인 LIMKB 컨트롤러를 이용해서 완성했었습니다.
+
+숨막히는 풀 와이어링&hellip;. 허접해 보이지만 작동은 잘 합니다~ ㅎ
+
+
+지금까지 수고(?) 해준 컨트롤러입니다.
+
+앞으로 수고 할 컨트롤러인 U.CON 입니다. 납도금 입니다만 무엇때문인지 금도금 처럼 보여지는군요 ㅎ 소자들이 촘촘해서 납땜하기에 어떨까 생각했는데 보기보다 어려운 부분은 없이 무난했습니다.">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/88/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.343cc480b9ffc8f04ccbe5e968ad674880cab773ec19905e93033065c1e7a804.css" integrity="sha256-NDzEgLn/yPBMy&#43;XpaK1nSIDKt3PsGZBekwMwZcHnqAQ=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/88/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Winkeyless blog (Alt + H)">Winkeyless blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="Winkeyless blog">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/categories" title="Category">
+                    <span>Category</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      U.CON 테스트 완료
+    </h1>
+    <div class="post-meta"><span title='2013-11-18 20:48:11 +0900 KST'>November 18, 2013</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>U.CON을 제대로 테스트 하기 위해서 잠자던 초호기(?)를 꺼냈습니다.</p>
+<p>처음이자 마지막으로 풀 와이어링을 해서 만든 해피형 키보드 입니다. 저는 이놈을 만들고 난 후 기판 그리기를 익히기 시작했습니다. 다시는 풀 와이어링은 하지 않겠다는 다짐을 하면서&hellip;</p>
+<p><img alt="DSC_9593.jpg" loading="lazy" src="/88/attachments/DSC_9593.jpg"></p>
+<p>아이콘의 전신인 LIMKB 컨트롤러를 이용해서 완성했었습니다.</p>
+<p><img alt="DSC_9597.jpg" loading="lazy" src="/88/attachments/DSC_9597.jpg"></p>
+<p>숨막히는 풀 와이어링&hellip;. 허접해 보이지만 작동은 잘 합니다~ ㅎ</p>
+<p><img alt="DSC_9598.jpg" loading="lazy" src="/88/attachments/DSC_9598.jpg"></p>
+<p><img alt="DSC_9594.jpg" loading="lazy" src="/88/attachments/DSC_9594.jpg"></p>
+<p>지금까지 수고(?) 해준 컨트롤러입니다.</p>
+<p><img alt="DSC_9596.jpg" loading="lazy" src="/88/attachments/DSC_9596.jpg"></p>
+<p>앞으로 수고 할 컨트롤러인 U.CON 입니다. 납도금 입니다만 무엇때문인지 금도금 처럼 보여지는군요 ㅎ 소자들이 촘촘해서 납땜하기에 어떨까 생각했는데 보기보다 어려운 부분은 없이 무난했습니다.</p>
+<p><img alt="DSC_9599.jpg" loading="lazy" src="/88/attachments/DSC_9599.jpg"></p>
+<p><img alt="DSC_9602.jpg" loading="lazy" src="/88/attachments/DSC_9602.jpg"></p>
+<p>컨트롤러를 교환한 모습입니다.</p>
+<p><img alt="DSC_9617.jpg" loading="lazy" src="/88/attachments/DSC_9617.jpg"></p>
+<p>실제 사이즈는 21mm * 39mm로 매우 작습니다.</p>
+<p><img alt="DSC_9618.jpg" loading="lazy" src="/88/attachments/DSC_9618.jpg"></p>
+<p><img alt="DSC_9619.jpg" loading="lazy" src="/88/attachments/DSC_9619.jpg"></p>
+<p>펌웨어를 설치하고 부트 매퍼로 간단히 매핑하니 잘 작동합니다. 오랜만에 이녀석에 손을 대니 감회가 새롭네요.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">Winkeyless blog</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

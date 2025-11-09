@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>FAQ - 자주하는 질문 &amp; 답변 | Winkeyless blog</title>
+<meta name="keywords" content="">
+<meta name="description" content="# 키보드 인식 관련
+1. 어느 순간 케이블 연결 시 USB 인식이 안 됩니다.
+- 실수로 P키를 누른 상태로 케이블을 연결하지는 않았나요? 그러면 PS/2 인터페이스 전용 키보드가 됩니다. 다시 USB로 사용하고 싶다면 U키를 누른 상태로 케이블을 연결해보세요. U와 P키를 동시에 누른 상태로 케이블을 연결하면 인터페이스를 자동 인식하여 작동합니다.
+2. 키보드의 RGB LED를 켜는 순간 USB 인식이 끊어집니다.
+- RGB LED는 많은 용량의 전류를 사용합니다. 만약, USB 케이블이 충분한 전류량을 지원하지 못한다면 이런 현상이 나타날 수 있습니다.">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/103/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.343cc480b9ffc8f04ccbe5e968ad674880cab773ec19905e93033065c1e7a804.css" integrity="sha256-NDzEgLn/yPBMy&#43;XpaK1nSIDKt3PsGZBekwMwZcHnqAQ=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/103/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Winkeyless blog (Alt + H)">Winkeyless blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="Winkeyless blog">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/categories" title="Category">
+                    <span>Category</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      FAQ - 자주하는 질문 &amp; 답변
+    </h1>
+    <div class="post-meta"><span title='2013-12-09 02:01:54 +0900 KST'>December 9, 2013</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p><strong># 키보드 인식 관련</strong></p>
+<p>1. 어느 순간 케이블 연결 시 USB 인식이 안 됩니다.</p>
+<p>- 실수로 P키를 누른 상태로 케이블을 연결하지는 않았나요? 그러면 PS/2 인터페이스 전용 키보드가 됩니다. 다시 USB로 사용하고 싶다면 U키를 누른 상태로 케이블을 연결해보세요. U와 P키를 동시에 누른 상태로 케이블을 연결하면 인터페이스를 자동 인식하여 작동합니다.</p>
+<p>2. 키보드의 RGB LED를 켜는 순간 USB 인식이 끊어집니다.</p>
+<p>- RGB LED는 많은 용량의 전류를 사용합니다. 만약, USB 케이블이 충분한 전류량을 지원하지 못한다면 이런 현상이 나타날 수 있습니다.</p>
+<p><strong># 스위치에 사용되는 다이오드는?</strong></p>
+<p>1N4148 스위칭 다이오드를 이용합니다. DIP타입이나 SMD타입 중 어떤 것이든 가능합니다.</p>
+<p><strong># Full LED 관련</strong></p>
+<p>1. 스위치에 LED를 모두 납땜 했는데 점등되지 않습니다.</p>
+<p>- ESC+Capslock 키를 눌러 LED mode를 변경해주세요. 기본값으로 off 상태이므로 다른 모드로 변경하면 켜집니다.</p>
+<p>2. LED mode를 변경해도 점등되지 않습니다.</p>
+<p>- LED마다 저항이 필요합니다. 혹시, 저항을 납땜하지 않았나요?</p>
+<p>3. 저항도 납땜해 주었습니다. 그래도 켜지지 않습니다.</p>
+<p>- 혹시 저항값이 너무 높지는 않은지요? 보통 800~1300옴의 저항을 사용합니다. 800k 저항이 아닌지 잘 확인해주세요.</p>
+<p>4. 저항 값도 문제 없고 mode 변경을 해도 켜지지 않습니다.</p>
+<p>- 그럼, 부트로더를 작동시켜 하드웨어적으로 문제가 없는지 확인해 봐야하겠습니다. 부트로더 상태에서는 모든 LED가 연속적으로 깜박거리므로 이때도 켜지지 않는다면 하드웨어 어딘가에 문제가 있다고 볼 수 있습니다.</p>
+<p>5. 부트로더에서도 켜지지 않습니다.</p>
+<p>- 그렇다면 더 이상은 일반적인 사항이 아니므로 댓글이나 이메일 등으로 피드백을 주시기 바랍니다.</p>
+<p><strong># 키 매핑 관련</strong></p>
+<p>1. 키 매핑 방식 별 우선 순위</p>
+<p>- 부트 매퍼와 하드웨어 키 매핑을 동시에 설정한 키의 경우 &ldquo;하드웨어 키 매핑&quot;이 우선</p>
+<dl>
+<dt>예&gt; 부트 매퍼로 &ldquo;A&quot;를 매핑한 키에 하드웨어 키 매핑을 이용하여 &ldquo;B&quot;로 매핑했을 경우 이 키를 누르면 &ldquo;B&quot;가 입력됩니다.</dt>
+<dd>
+<p>부프 매퍼의 맵핑을 사용하고 싶다면 하드웨어 맵핑을 클리어 해주면 됩니다. 아래 링크의 내용을 참고하세요.</p>
+</dd>
+<dd>
+<p>하드웨어 키 맵핑 설정 법 : <a href="http://blog.winkeyless.kr/46">http://blog.winkeyless.kr/46</a></p>
+</dd>
+</dl>
+<p>- 하드웨어 키 매핑의 작동 키(좌 Ctrl+Shift+Alt+우Shift)를 누를 수 없는 경우 케이블을 언플러깅 한 후 &ldquo;m&quot;키를 누르고 있는 상태에서 플러깅을 하면 키보드 인식과 동시에 하드웨어 키 매핑이 작동됩니다. (이 때 사용 되는 m키는 부트 매퍼로 설정한 키를 눌러야 합니다.)</p>
+<p><strong># 매크로 관련</strong></p>
+<p>- 매크로는 크게 2종류로 키보드에서 직접 입력하는 &ldquo;하드웨어 매크로&quot;와 부트 매퍼 사이트를 통해서 편집 후 .hex 파일을 부트 로더로 키보드에 저장하는 &ldquo;커스텀 매크로&quot;가 있습니다.</p>
+<p>- 두 매크로를 작동 시키는 키는 서로 달라서 하드웨어 매크로는 &ldquo;MAC1<del>12&quot;키로, 커스텀 매크로는 &ldquo;CST MAC1</del>12&quot;키로 작동 시킵니다.</p>
+<p><strong># 기판을 배송 받은 후 해야 할 것</strong></p>
+<p>1. 기판 상태 및 소자 확인 : 기판의 품질에 이상이 있는지 육안으로 확인하고, 필요한 소자가 모두 포함되어 있는지 각 기판별 가이드와 비교하여 확인합니다.</p>
+<p>2. 소자 납땜 : MCU 및 소자들을 정해진 위치에 납땜해 줍니다.</p>
+<p>- MCU에는 기본적으로 부트로더만 설치되어 있으므로 아직 키보드로 작동하지 않습니다. 그러므로, 이 상태에서는 PC에 연결해도 아무런 반응이 나타나지 않습니다.</p>
+<p>3. 펌웨어 및 키맵 업로드 : 아래의 링크를 참고하여 펌웨어 및 키맵을 업로드 해줍니다.</p>
+<p>- 부트로더를 이용한 펌웨어&amp;키맵 업로드 방법 : <a href="http://blog.winkeyless.kr/18">http://blog.winkeyless.kr/18</a></p>
+<p>- 펌웨어를 업로드하면 이때 부터는 PC에서 키보드로 인식이 됩니다.</p>
+<p>4. 스위치 다이오드 납땜 : DIP 타입 또는 SMD 타입의 다이오드(1N4148)을 각 스위치마다 납땜해 줍니다.</p>
+<p>5. 키보드 입력 테스트 : 전도성 물체(핀셋, 철선, 전선 등)을 이용하여 스위치의 두 접점을 쇼트 시켜 각 키가 잘 입력되는지 확인합니다.</p>
+<p>6. 스위치 납땜 : 스위치를 체결하고 납땜합니다.</p>
+<p>7. 스위치 입력 테스트 : 최종적으로 스위치의 입력이 잘되는지 확인합니다.</p>
+<p><strong># 기판의 스페이스 오늘쪽 키들(R alt/R ctrl/FN 등)이 입력되지 않는 경우</strong></p>
+<p>- 기판에 따라 R alt는 &lsquo;한/영&rsquo;키로, R ctrl은 &lsquo;한자&rsquo;키로 매핑 되어 있는 경우가 있습니다. 특정, 키 테스터에서는 해당 키를 확인 할 수 없을 수 있으니 참고하세요.</p>
+<p>- FN 키의 경우는 키보드에서만 인식하는 특수 키 이므로 PC에서는 이 키의 입력 여부를 확인 할 수 없습니다. FN+다른 키 조합으로 작동 여부를 확인하면 됩니다.</p>
+<p><strong># 아래와 같은 사진은 납땜이 잘못 된 부분인가요?</strong></p>
+<p><img alt="DSC_1483.jpg" loading="lazy" src="/103/attachments/DSC_1483.jpg"> <img alt="DSC_1484.jpg" loading="lazy" src="/103/attachments/DSC_1484.jpg"></p>
+<p>아닙니다. 필요하면 떼서 쓸 수 있도록 한 쪽만 납땜 해 놓은 것입니다. LED를 위한 330옴 저항인데 기본적으로 넘락 키 또는 스크롤락 키가 없는 기판에는 LED도 있을 필요가 없기 때문에 사진과 같이 LED가 점등 되지 않도록 납땜을 해 둡니다. 사용자가 원한다면 떼어 제대로 납땜을 해 LED를 사용할 수 있습니다.</p>
+<p>(작성 중 : 추가할 의견을 말씀해주시면 적용하도록 하겠습니다.)</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">Winkeyless blog</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

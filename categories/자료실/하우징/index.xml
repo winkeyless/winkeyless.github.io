@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>자료실/하우징 on Winkeyless blog</title>
+    <link>http://localhost:1313/categories/%EC%9E%90%EB%A3%8C%EC%8B%A4/%ED%95%98%EC%9A%B0%EC%A7%95/</link>
+    <description>Recent content in 자료실/하우징 on Winkeyless blog</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>ko_KR</language>
+    <lastBuildDate>Thu, 21 Apr 2016 13:37:35 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/%EC%9E%90%EB%A3%8C%EC%8B%A4/%ED%95%98%EC%9A%B0%EC%A7%95/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>일반 스타일 아크릴 하우징 도면</title>
+      <link>http://localhost:1313/211/</link>
+      <pubDate>Thu, 21 Apr 2016 13:37:35 +0900</pubDate>
+      <guid>http://localhost:1313/211/</guid>
+      <description>&lt;p&gt;외관은 일반 스타일인 IF 하우징과 동일하지만 알루 보강판을 사용하지 않고 전체 아크릴을 이용한 하우징 도면입니다.&lt;/p&gt;
+&lt;p&gt;- IF 하우징용 볼트 세트가 필요합니다.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://winkeyless.com/product/if-bolt/&#34;&gt;http://winkeyless.com/product/if-bolt/&lt;/a&gt;&lt;/p&gt;
+&lt;dl&gt;
+&lt;dt&gt;&lt;a href=&#34;http://localhost:1313/211/attachments/B.pad_3_5_5_5_order_2000.dwg&#34;&gt;B.pad_3_5_5_5_order_2000.dwg&lt;/a&gt;&lt;/dt&gt;
+&lt;dd&gt;
+&lt;p&gt;B.pad 용&lt;/p&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;p&gt;&lt;a href=&#34;http://localhost:1313/211/attachments/B.87_3_5_5_5_order_2000.dwg&#34;&gt;B.87_3_5_5_5_order_2000.dwg&lt;/a&gt; : B.87용&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://localhost:1313/211/attachments/A_87_top_3_5_5(f)_5_acryl_long_nut_2000.dwg&#34;&gt;A_87_top_3_5_5(f)_5_acryl_long_nut_2000.dwg&lt;/a&gt; : A.87용&lt;/p&gt;
+&lt;p&gt;참고 그림&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;20160421_133802_001.png&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/211/attachments/20160421_133802_001.png&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>BBB2 아크릴 하우징 도면</title>
+      <link>http://localhost:1313/208/</link>
+      <pubDate>Mon, 29 Feb 2016 16:09:42 +0900</pubDate>
+      <guid>http://localhost:1313/208/</guid>
+      <description>&lt;p&gt;B시리즈 기판 아크릴 하우징 BBB2입니다.&lt;/p&gt;
+&lt;p&gt;이전 BBB 하우징과 외관은 유사하며 세세한 부분을 보완하였습니다.&lt;/p&gt;
+&lt;p&gt;이전 하우징과는 호환되지 않는 부분이 있으니,&lt;/p&gt;
+&lt;p&gt;- 볼트/너트/범폰 세트&lt;/p&gt;
+&lt;p&gt;- 디퓨저&lt;/p&gt;
+&lt;p&gt;등은 BBB2 용 부품을 이용하시길 바랍니다.&lt;/p&gt;
+&lt;p&gt;관련 부품은 윈키리스 스토어에서 구입 가능합니다.&lt;/p&gt;
+&lt;p&gt;윈키리스 스토어 : &lt;a href=&#34;http://winkeyless.com/&#34;&gt;http://winkeyless.com/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;조립 가이드 : &lt;a href=&#34;http://blog.winkeyless.kr/207&#34;&gt;http://blog.winkeyless.kr/207&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;- 2010버전으로 저장되었습니다.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://localhost:1313/208/attachments/BBB2_all_160302_1.dwg&#34;&gt;BBB2_all_160302_1.dwg&lt;/a&gt; : B.87 EX, B.87, B.mini EX, B.mini, B.face, B.pad&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;20160426_125904_002.png&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/208/attachments/20160426_125904_002.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://localhost:1313/208/attachments/B.8000.BBB2_160426.dwg&#34;&gt;B.8000.BBB2_160426.dwg&lt;/a&gt; : B.8000, B.8000 TKL&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;20160426_125820_001.png&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/208/attachments/20160426_125820_001.png&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>B.8000 V0.1 PCB 용 아크릴 하우징</title>
+      <link>http://localhost:1313/194/</link>
+      <pubDate>Thu, 30 Jul 2015 19:38:37 +0900</pubDate>
+      <guid>http://localhost:1313/194/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://localhost:1313/194/attachments/B.8000_V01_3_5_5_5_2000.dwg&#34;&gt;B.8000_V01_3_5_5_5_2000.dwg&lt;/a&gt; : 풀 배열&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://localhost:1313/194/attachments/B.8000_v01_3_5_5_5_TKL_2000.dwg&#34;&gt;B.8000_v01_3_5_5_5_TKL_2000.dwg&lt;/a&gt; : 텐키리스&lt;/p&gt;
+&lt;p&gt;B.8000 V0.1, B.8000 V0.2 PCB 모두 호환되는 아크릴 하우징 입니다.&lt;/p&gt;
+&lt;p&gt;- 비키 스타일이 아닌 일반 스타일 입니다.&lt;/p&gt;
+&lt;p&gt;- 위 도면에 필요한 볼트 세트 : &lt;a href=&#34;http://winkeyless.com/product/if-bolt/&#34;&gt;http://winkeyless.com/product/if-bolt/&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>IF 아크릴 하우징 도면</title>
+      <link>http://localhost:1313/190/</link>
+      <pubDate>Sat, 04 Apr 2015 09:02:05 +0900</pubDate>
+      <guid>http://localhost:1313/190/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://localhost:1313/190/attachments/B.87_3_5_5_5_acryl_IF_2000.dwg&#34;&gt;B.87_3_5_5_5_acryl_IF_2000.dwg&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://localhost:1313/190/attachments/B.87_EX_3_5_5_5_acryl_IF_2000.dwg&#34;&gt;B.87_EX_3_5_5_5_acryl_IF_2000.dwg&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://localhost:1313/190/attachments/B.face_3_5_5_5_acryl_IF_2000.dwg&#34;&gt;B.face_3_5_5_5_acryl_IF_2000.dwg&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://localhost:1313/190/attachments/B.mini_3_5_5_5_acryl_IF_2000.dwg&#34;&gt;B.mini_3_5_5_5_acryl_IF_2000.dwg&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://localhost:1313/190/attachments/B.thumb_3_5_5_5_acryl_IF_2000.dwg&#34;&gt;B.thumb_3_5_5_5_acryl_IF_2000.dwg&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;아크릴은 총 5개의 층으로 이루어져 있습니다. 아래 사진으로 설명해드리자면,&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;DSC_1476.jpg&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/190/attachments/DSC_1476.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://cfile24.uf.tistory.com/image/2573453C54F16A012C8052&#34;&gt;&lt;/p&gt;
+&lt;p&gt;상판 - 5T 검정 아크릴&lt;/p&gt;
+&lt;p&gt;중판1 - 5T 백색 반투명 아크릴&lt;/p&gt;
+&lt;p&gt;중판2 - 5T 백색 반투명 아크릴&lt;/p&gt;
+&lt;p&gt;하판 - 3T 백색 아크릴&lt;/p&gt;
+&lt;p&gt;뒷굽 - 5T *3 백색 반투명 아크릴&lt;/p&gt;
+&lt;p&gt;이렇게 구성 되어 있으므로 아크릴 업체에 의뢰하실 때 위와 같이 컬러를 주문하시면 됩니다.&lt;/p&gt;
+&lt;p&gt;IF 아크릴 하우징 조립 가이드 : &lt;a href=&#34;http://blog.winkeyless.kr/189&#34;&gt;http://blog.winkeyless.kr/189&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>B 시리즈 아크릴 하우징 도면</title>
+      <link>http://localhost:1313/162/</link>
+      <pubDate>Thu, 26 Jun 2014 11:22:17 +0900</pubDate>
+      <guid>http://localhost:1313/162/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;최신 도면인 BBB2 하우징을 이용하실 바랍니다.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;http://blog.winkeyless.kr/208&#34;&gt;http://blog.winkeyless.kr/208&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;동일한-도면의-제품을-직접-구매-할-수-있습니다&#34;&gt;동일한 도면의 제품을 직접 구매 할 수 있습니다.&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;http://hanaacryl.com/product/?s_category=150&#34;&gt;http://hanaacryl.com/product/?s_category=150&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;현재 BBB2 도면으로 변경되어 해당 상품은 판매 중지되었습니다.&lt;/p&gt;
+&lt;h3 id=&#34;조립에-필요한-볼트너트범폰-등은-기판과-함께-구입할-수-있습니다&#34;&gt;조립에 필요한 볼트/너트/범폰 등은 기판과 함께 구입할 수 있습니다.&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;http://winkeyless.kr/store/?product=bolt-nut-bumpon&#34;&gt;http://winkeyless.kr/store/?product=bolt-nut-bumpon&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;조립-방법&#34;&gt;조립 방법&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;http://kbdlab.co.kr/328506&#34;&gt;http://kbdlab.co.kr/328506&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;- B.8000 (V0.2 용)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;** B.8000 V0.1 PCB와는 호환되지 않는 도면입니다.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://localhost:1313/162/attachments/b8000_bbb_150506_2000.dwg&#34;&gt;b8000_bbb_150506_2000.dwg&lt;/a&gt; : 풀 배열&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://localhost:1313/162/attachments/b8000_TKL_bbb_150506_2000.dwg&#34;&gt;b8000_TKL_bbb_150506_2000.dwg&lt;/a&gt; : 텐키리스&lt;/p&gt;
+&lt;p&gt;- B.87 EX&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://localhost:1313/162/attachments/B.87_EX.2mm_2000.dwg&#34;&gt;B.87_EX.2mm_2000.dwg&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;참고 사진&amp;gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;DSC_0284.jpg&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/162/attachments/DSC_0284.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;DSC_0287.jpg&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/162/attachments/DSC_0287.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;DSC_0290.jpg&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/162/attachments/DSC_0290.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;DSC_0291.jpg&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/162/attachments/DSC_0291.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;- B.87&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://localhost:1313/162/attachments/B.87.2mm_2000.dwg&#34;&gt;B.87.2mm_2000.dwg&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;참고 사진&amp;gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>ps2avrU V1.5 펌웨어 업데이트 | Winkeyless blog</title>
+<meta name="keywords" content="">
+<meta name="description" content="펌웨어 링크 : http://blog.winkeyless.kr/17
+2013.12.21
+- 이전 버전에서 나타났던 현상들을 모두 패치했습니다
+1. 특정 PC의 cmos 단에서 키 입력 오류(먹통)현상
+2. 특정 mac os에서 안전한 시동으로 부팅되는 현상
+3. 특정 단계에서 비밀번호 입력 시 잘못된 비밀번호로 입력되는 현상
+단, 기존에 ps2avrU 키보드를 사용했던 PC라면 다음과 같이 드라이버 업데이트를 해줘야 합니다.
+(드라이버 업데이트를 하지 않아도 기본적인 키보드로는 작동합니다. 멀티미디어 키를 위한 드라이버 업데이트입니다.)
+(ps2avrU키보드를 처음 사용하는 PC라면 별도의 업데이트가 필요 없습니다.)
+1. &ldquo;USB 입력 장치&rdquo; 중 VID 20A0이고 PID가 421C인 장치를 찾습니다.">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/110/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.343cc480b9ffc8f04ccbe5e968ad674880cab773ec19905e93033065c1e7a804.css" integrity="sha256-NDzEgLn/yPBMy&#43;XpaK1nSIDKt3PsGZBekwMwZcHnqAQ=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/110/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Winkeyless blog (Alt + H)">Winkeyless blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="Winkeyless blog">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/categories" title="Category">
+                    <span>Category</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      ps2avrU V1.5 펌웨어 업데이트
+    </h1>
+    <div class="post-meta"><span title='2013-12-21 03:04:24 +0900 KST'>December 21, 2013</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>펌웨어 링크 : <a href="http://blog.winkeyless.kr/17">http://blog.winkeyless.kr/17</a></p>
+<p>2013.12.21</p>
+<p>- 이전 버전에서 나타났던 현상들을 모두 패치했습니다</p>
+<p>1. 특정 PC의 cmos 단에서 키 입력 오류(먹통)현상</p>
+<p>2. 특정 mac os에서 안전한 시동으로 부팅되는 현상</p>
+<p>3. 특정 단계에서 비밀번호 입력 시 잘못된 비밀번호로 입력되는 현상</p>
+<p>단, 기존에 ps2avrU 키보드를 사용했던 PC라면 다음과 같이 드라이버 업데이트를 해줘야 합니다.</p>
+<p>(드라이버 업데이트를 하지 않아도 기본적인 키보드로는 작동합니다. 멀티미디어 키를 위한 드라이버 업데이트입니다.)</p>
+<p>(ps2avrU키보드를 처음 사용하는 PC라면 별도의 업데이트가 필요 없습니다.)</p>
+<p>1. &ldquo;USB 입력 장치&rdquo; 중 VID 20A0이고 PID가 421C인 장치를 찾습니다.</p>
+<p>- V1.6 이전의 ID는 VID = 4242, PID = E131입니다.</p>
+<p><img alt="20131221_024557_005.png" loading="lazy" src="/110/attachments/20131221_024557_005.png"></p>
+<p><img alt="20131221_024631_006.png" loading="lazy" src="/110/attachments/20131221_024631_006.png"></p>
+<p><img alt="20140224_222537_002.png" loading="lazy" src="/110/attachments/20140224_222537_002.png"></p>
+<p>2. 그림처럼 아래에서 3번째 장치로 확인했다면, 마우스의 오른쪽 버튼을 해당 장치에 클릭하여 &ldquo;드라이버 소프트웨어 업데이트&quot;를 선택합니다.</p>
+<p><img alt="20131221_024649_008.png" loading="lazy" src="/110/attachments/20131221_024649_008.png"></p>
+<p>3. 자동 검색을 클릭하여 실행하면, 자동으로 해당 드라이버가 설치됩니다. (드라이버가 모두 설치 될 동안 기다려주세요.)</p>
+<p><img alt="20131221_024653_009.png" loading="lazy" src="/110/attachments/20131221_024653_009.png"></p>
+<p>4. 잠시동안 트레이 아이콘에 드라이버가 설치 중임이 표시됩니다.</p>
+<p><img alt="20131221_024723_010.png" loading="lazy" src="/110/attachments/20131221_024723_010.png"></p>
+<p>5. 드라이버가 모두 설치되었다면, &ldquo;HID 규격 마우스&rdquo;, &ldquo;HID 규격 사용자 컨트롤러 장치&rdquo;, &ldquo;HID 준수 장치&rdquo;, &ldquo;USB 입력 장치&rdquo; 가 하나씩 추가됩니다.</p>
+<p><img alt="20131221_024857_011.png" loading="lazy" src="/110/attachments/20131221_024857_011.png"></p>
+<p>6. 이렇게 설치가 완료되면 키보드의 기본 키 및 멀티미디어 키까지 모두 정상적으로 작동됩니다.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">Winkeyless blog</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

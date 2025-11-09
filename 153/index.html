@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>ps2avrGB firmware | Winkeyless blog</title>
+<meta name="keywords" content="">
+<meta name="description" content="ps2avrGB는 ps2avrU 펌웨어에 RGB LED를 컨트롤할 수 있는 sub MCU를 추가한 펌웨어 입니다.
+대부분의 기능은 ps2avrU와 동일하며 추가적으로 더 손쉽게 키 맵핑 및 커스텀 매크로를 등록할 수 있는 bootMapper Client를 이용한 관리가 가능합니다.
+파일 설명
+
+
+펌웨어
+
+
+펌웨어 업데이트 시 사용됩니다.
+
+ps2avrGB_NKRO.hex : 기본 펌웨어
+ps2avrGB_split_NKRO.hex : split 펌웨어 (기판이 분리되어있는 (VE.A 등) 키보드용 펌웨어입니다. 일반 기판의 경우 이용하지마세요.)
+
+
+
+
+
+키 맵핑 파일
+
+
+키 맵핑 파일은 펌웨어를 업데이트 하더라도 변동없이 계속 유지됩니다.">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/153/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.343cc480b9ffc8f04ccbe5e968ad674880cab773ec19905e93033065c1e7a804.css" integrity="sha256-NDzEgLn/yPBMy&#43;XpaK1nSIDKt3PsGZBekwMwZcHnqAQ=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/153/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Winkeyless blog (Alt + H)">Winkeyless blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="Winkeyless blog">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/categories" title="Category">
+                    <span>Category</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      ps2avrGB firmware
+    </h1>
+    <div class="post-meta"><span title='2014-06-23 04:45:44 +0900 KST'>June 23, 2014</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>ps2avrGB는 ps2avrU 펌웨어에 RGB LED를 컨트롤할 수 있는 sub MCU를 추가한 펌웨어 입니다.</p>
+<p>대부분의 기능은 ps2avrU와 동일하며 추가적으로 더 손쉽게 키 맵핑 및 커스텀 매크로를 등록할 수 있는 bootMapper Client를 이용한 관리가 가능합니다.</p>
+<h3 id="파일-설명">파일 설명<a hidden class="anchor" aria-hidden="true" href="#파일-설명">#</a></h3>
+<ul>
+<li>
+<p>펌웨어</p>
+<ul>
+<li>
+<p>펌웨어 업데이트 시 사용됩니다.</p>
+<ul>
+<li><strong>ps2avrGB_NKRO.hex</strong> : <strong>기본 펌웨어</strong></li>
+<li>ps2avrGB_split_NKRO.hex : split 펌웨어 (기판이 분리되어있는 (VE.A 등) 키보드용 펌웨어입니다. 일반 기판의 경우 이용하지마세요.)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>키 맵핑 파일</p>
+<ul>
+<li>
+<p>키 맵핑 파일은 펌웨어를 업데이트 하더라도 변동없이 계속 유지됩니다.</p>
+</li>
+<li>
+<p>펌웨어 업데이트와 관계 없습니다.(<strong>아래 파일들은 펌웨어가 아닙니다.</strong>)</p>
+<ul>
+<li>keymap_gb_B87(EX).hex : B.87, B.87 EX, B.mini, B.mini EX 용 키 맵핑 파일</li>
+<li>keymap_gb_face_thumb.hex : B.face, B.thumb 용 키 맵핑 파일</li>
+<li>keymap_gb_pad.hex : B.pad 용 키 맵핑 파일</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="펌웨어-및-키-맵핑-파일은-bootmapper-client를-이용하여-업로드업데이트-해줍니다">펌웨어 및 키 맵핑 파일은 bootMapper Client를 이용하여 업로드/업데이트 해줍니다.<a hidden class="anchor" aria-hidden="true" href="#펌웨어-및-키-맵핑-파일은-bootmapper-client를-이용하여-업로드업데이트-해줍니다">#</a></h3>
+<p>bootMapper Client 다운로드 : <a href="http://blog.winkeyless.kr/155">http://blog.winkeyless.kr/155</a></p>
+<p>bootMapper Client 사용 법 : <a href="http://blog.winkeyless.kr/154">http://blog.winkeyless.kr/154</a></p>
+<p>ps2avrGB 펌웨어 정보 : <a href="http://blog.winkeyless.kr/156">http://blog.winkeyless.kr/156</a></p>
+<h3 id="-업데이트-내역은-ps2avru의-내용을-참조하세요">* 업데이트 내역은 ps2avrU의 내용을 참조하세요.<a hidden class="anchor" aria-hidden="true" href="#-업데이트-내역은-ps2avru의-내용을-참조하세요">#</a></h3>
+<p>ps2avrU 펌웨어 : <a href="http://blog.winkeyless.kr/17">http://blog.winkeyless.kr/17</a></p>
+<hr>
+<p><a href="/153/attachments/ps2avrGB_firmware_V1.5.0_190822.zip">ps2avrGB_firmware_V1.5.0_190822.zip</a></p>
+<p><a href="/153/attachments/ps2avrGB_firmware_V1.2.3_160520.zip">ps2avrGB_firmware_V1.2.3_160520.zip</a></p>
+<h3 id="ps2avrgb--ps2avrgb4u-공통">ps2avrGB &amp; ps2avrGB4U 공통<a hidden class="anchor" aria-hidden="true" href="#ps2avrgb--ps2avrgb4u-공통">#</a></h3>
+<p>- 3락의 기능 추가 : FN2, FN3 lock LED 추가</p>
+<p>- Toggle BootMapper 상태를 BootMapper Client와 동기화</p>
+<p>- L Ctrl 키의 첫 입력이 스킵되는 현상 수정</p>
+<p><a href="/153/attachments/ps2avrGB_firmware_V1.2.1_160506.zip">ps2avrGB_firmware_V1.2.1_160506.zip</a></p>
+<h3 id="ps2avrgb">ps2avrGB<a hidden class="anchor" aria-hidden="true" href="#ps2avrgb">#</a></h3>
+<p>- FN키를 여러 개 누를 경우 오작동하는 것을 패치</p>
+<p>- 3 lock option 추가 : Lock Reverse, FN Lock</p>
+<p><a href="/153/attachments/ps2avrGB_firmware_V1.2.0_160420.zip">ps2avrGB_firmware_V1.2.0_160420.zip</a></p>
+<p>2016.4.20.</p>
+<h3 id="ps2avrgb-ps2avru-공통">ps2avrGB, ps2avrU 공통<a hidden class="anchor" aria-hidden="true" href="#ps2avrgb-ps2avru-공통">#</a></h3>
+<p>- USB3.0 및 일부 기기와의 호환성 개선</p>
+<h3 id="ps2avrgb-1">ps2avrGB<a hidden class="anchor" aria-hidden="true" href="#ps2avrgb-1">#</a></h3>
+<dl>
+<dt>- 3 락 LED 동작 옵션 추가</dt>
+<dd>
+<p>기본/항상 켜짐/항상 꺼짐</p>
+</dd>
+</dl>
+<p><a href="/153/attachments/ps2avrGB_firmware_V1.1_160404.zip">ps2avrGB_firmware_V1.1_160404.zip</a></p>
+<p>2016.4.4.</p>
+<h3 id="ps2avrgb-ps2avru-공통-1">ps2avrGB, ps2avrU 공통<a hidden class="anchor" aria-hidden="true" href="#ps2avrgb-ps2avru-공통-1">#</a></h3>
+<dl>
+<dt>- FN 작동 방식을 변경하여 자연스럽게 사용할 수 있도록 수정</dt>
+<dd>
+<p>이전에는 가장 먼저 FN 키를 눌러야 작동을 했지만, 수정 후 어느때라도 FN키를 이용할 수 있음</p>
+</dd>
+</dl>
+<p><a href="/153/attachments/ps2avrGB_firmware_V1.1_160228.zip">ps2avrGB_firmware_V1.1_160228.zip</a></p>
+<p>2016.2.28.</p>
+<h3 id="ps2avrgb-ps2avru-공통-2">ps2avrGB, ps2avrU 공통<a hidden class="anchor" aria-hidden="true" href="#ps2avrgb-ps2avru-공통-2">#</a></h3>
+<p>- 간헐적인 키 딜레이 및 스킵 현상 패치</p>
+<p>- 키보드 인터페이스의 기본값을 &lsquo;자동 검색&rsquo;이 아닌 &lsquo;USB&rsquo;로 설정</p>
+<p>=&gt; ps/2로 이용할 경우 반드시 &ldquo;P&quot;키를 누른 상태로 케이블을 연결(전원 인가)하여 ps/2 키보드로 설정 한 후 사용해야 함</p>
+<p>(한 번 설정 후에는 계속 ps/2 키보드로 작동 됨)</p>
+<p>=&gt; 다시 USB 키보드로 이용하려면 U키를 누른 상태로 USB 연결</p>
+<p>- FN계열키 해당 레이어의 같은 위치(스위치)에 다른 키를 맵핑하여 사용 할 수 있음</p>
+<p>- 일부 스위치에서 중복 입력 현상이 일어나는 것을 패치</p>
+<p><a href="/153/attachments/ps2avrGB_firmware_V1.1_160212.zip">ps2avrGB_firmware_V1.1_160212.zip</a></p>
+<p>2016.2.12.</p>
+<p><strong>현재 이 버젼에서 간헐적으로 키 딜레이 및 스킵 현상이 발생하는 것을 확인했습니다.</strong></p>
+<p><strong>업데이트 후 해당 현상이 발견된다면 이전 버젼을 사용해주세요.</strong></p>
+<p><strong>최대한 빠르게 패치를 한 버젼을 업데이트 하겠습니다.</strong></p>
+<h3 id="ps2avrgb-ps2avru-공통-3">ps2avrGB, ps2avrU 공통<a hidden class="anchor" aria-hidden="true" href="#ps2avrgb-ps2avru-공통-3">#</a></h3>
+<p>- 일부 특수 키가 제대로 작동되지 않던 현상 패치</p>
+<p>- FN키를 누른 후 개별 키가 중복 입력되는 현상 패치</p>
+<p>- 커스텀 듀얼 액션 적용 : (BootMapper Client 업데이트 필요)</p>
+<p>= 원하는 조합으로 듀얼 액션을 키를 설정할 수 있음</p>
+<p>= 기본 듀얼 액션 키를 그대로 이용하려면 각 펌웨어의 &lsquo;dualaction&rsquo;폴더의 기본 파일을 업로드해줘야 합니다.</p>
+<p>- ps/2 작동시 일부 오작동 패치</p>
+<p>- FN 키 관련 기능 수정</p>
+<h3 id="ps2avrgb-2">ps2avrGB<a hidden class="anchor" aria-hidden="true" href="#ps2avrgb-2">#</a></h3>
+<p>- 슬립 상태에서 RGB LED가 켜져 있는 현상 패치</p>
+<p><a href="/153/attachments/ps2avrGB_firmware_V1.1_151205.zip">ps2avrGB_firmware_V1.1_151205.zip</a></p>
+<p>2015.12.5.</p>
+<p>- Quick Macro가 저장되지않던 버그 수정</p>
+<p>- 부트맵퍼 트리거 상태에서 layer가 변경되면 오작동을 하던 현상 패치</p>
+<p>- flow모드에서 0x000000 컬러 설정시 변환이 잠시 정지하는 버그 패치</p>
+<p><a href="/153/attachments/ps2avrGB_firmware_V1.1_151030.zip">ps2avrGB_firmware_V1.1_151030.zip</a></p>
+<p>2015.10.30.</p>
+<h3 id="ps2avrgb-ps2avru-공통-4">ps2avrGB, ps2avrU 공통<a hidden class="anchor" aria-hidden="true" href="#ps2avrgb-ps2avru-공통-4">#</a></h3>
+<p>- FN 키의 작동 방식을 lazy FN으로 고정 (관련 옵션 제거)</p>
+<p>- 일부 듀얼액션 키가 작동하지 않던 버그 수정</p>
+<p>- EU 배열의 키보드에서 bootmapper trigger가 작동하지 않는 상황이 없도록 패치</p>
+<h3 id="ps2avrgb-3">ps2avrGB<a hidden class="anchor" aria-hidden="true" href="#ps2avrgb-3">#</a></h3>
+<p>- 하드웨어 메뉴를 제거하고 관련 옵션을 부트맵퍼 클라이언트에서 설정 할 수 있도록 수정</p>
+<p>- Full LED mode 및 밝기를 부트맵퍼 클라이언트에서 설정 할 수 있도록 수정</p>
+<p>- RGB transition speed 설정 옵션 추가</p>
+<p>(최신 버젼의 Bootmapper Client 필요)</p>
+<p><a href="/153/attachments/ps2avrGB_firmware_V1.0_150904.zip">ps2avrGB_firmware_V1.0_150904.zip</a></p>
+<p>2015.9.4.</p>
+<p>- FN키와 듀얼 액션 키를 함께 사용할 경우 발생하던 버그 패치</p>
+<p><a href="/153/attachments/ps2avrGB_firmware_V1.0_150801.zip">ps2avrGB_firmware_V1.0_150801.zip</a></p>
+<p>2015.8.1.</p>
+<dl>
+<dt>- RGB LED의 rainbow 모드 2개 추가</dt>
+<dd>
+<p>static = 설정한 각 컬러로 고정</p>
+</dd>
+<dd>
+<p>flow = 설정한 각 컬러가 한 방향으로 흐르듯 변환</p>
+</dd>
+</dl>
+<p>(bootMapperClient로 업데이트가 필요 합니다.)</p>
+<p><a href="/153/attachments/ps2avrGB_firmware_V1.0_150726.zip">ps2avrGB_firmware_V1.0_150726.zip</a></p>
+<p>2015.7.26.</p>
+<dl>
+<dt>- 퀵 스왑 작동 키 변경</dt>
+<dd>
+<p>이전 ALT+GUI+ENTER 조합에서 ALT+GUI+R_SHIFT 조합으로 변경</p>
+</dd>
+</dl>
+<p>(일부 응용프로그램에서 ALT+GUI(CMD)+ENTER 단축키를 사용하기때문에 변경)</p>
+<p>- 절전 중 PC를 깨울 수 있는 기능(Wake Up) 추가</p>
+<p><a href="/153/attachments/ps2avrGB_firmware_V1.0_150215.zip">ps2avrGB_firmware_V1.0_150215.zip</a></p>
+<p>2015.2.15.</p>
+<dl>
+<dt>- 퀵 스왑 작동 키 변경</dt>
+<dd>
+<p>이전 ALT+GUI키에서 ENTER를 추가하여 ALT+GUI+ENTER를 눌러 퀵 스왑을 토글 시킵니다.</p>
+</dd>
+<dd>
+<p>이유는 포토샵 등의 작업 시 ALT+GUI키를 마우스 조합으로 이용하다 퀵 스왑이 작동되는 것을 방지 하기 위함입니다.</p>
+</dd>
+</dl>
+<p>- 맥 OS에서 COLD BOOTING 후 KEY SKIP이 나타나는 증상 패치</p>
+<dl>
+<dt>- PS/2의 키 반복 속도를 조절할 수 있도록 추가</dt>
+<dd>
+<p>숫자 1~3키 하나를 누른 상태로 케이블 연결(전원 ON) 하여 키 반복 속도를 조절 합니다.</p>
+</dd>
+<dd>
+<p>1은 기본 속도(빠름), 2 = 조금 빠름, 3 = 보통 속도</p>
+</dd>
+<dd>
+<p>설정 값은 저장 되어 다시 설정하기 전까지 유지됩니다.</p>
+</dd>
+</dl>
+<p><a href="/153/attachments/ps2avrGB_firmware_V1.0_140926.zip">ps2avrGB_firmware_V1.0_140926.zip</a></p>
+<dl>
+<dt>- 듀얼액션 작동 방식 변경</dt>
+<dd>
+<p>누르면 기본적으로 조합키가 눌려진 상태가 되던 것을, 약 0.5초간 딜레이를 준다.</p>
+</dd>
+<dd>
+<p>그렇기 때문에, 누른 상태로 잠시 있어야 조합키가 작동된다.</p>
+</dd>
+<dd>
+<p>다른 키와 조합하면 딜레이와 관계없이 조합키로 작동된다.</p>
+</dd>
+<dd>
+<p>단독 키(한/영 등)로 사용하려면 눌렀다 떼는 행동을 약0.5초 안에 해야 된다.</p>
+</dd>
+</dl>
+<p>= 예를 들어 &ldquo;R alt + 한/영 &ldquo;키를 이용시 한/영 을 사용하고 싶다면 0.5초 내에 다운/업을 해야 하고,</p>
+<p>R alt를 누르고 싶다면 0.5초 동안 누르고 있거나, 다른 키들과 조합을 하면 된다.</p>
+<p><a href="/153/attachments/ps2avrGB_firmware_V1.0_140914.zip">ps2avrGB_firmware_V1.0_140914.zip</a></p>
+<p>- fn2/3 led 설정 시 간혹 n/l LED가 꺼지는 현상 수정</p>
+<dl>
+<dt>- 키보드에서 RGB key event mode 변경 할 수 있도록 추가</dt>
+<dd>
+<p>ESC + Ctrl + Capslock으로 RGB key event mode 변경</p>
+</dd>
+</dl>
+<p><a href="/153/attachments/ps2avrGB_firmware_V1.0_140901.zip">ps2avrGB_firmware_V1.0_140901.zip</a></p>
+<dl>
+<dt>- 부트매퍼 트리거 상태에서 caps lock LED의 깜빡이는 속도를 조금 더 느리게 조절</dt>
+<dd>
+<p>인터페이스 자동 인식 표시와 확실한 구분을 주기 위한 패치</p>
+</dd>
+<dt>- fn2/fn3 led의 on/off 표시를 nl led 와 sl led에 선택할 수 있도록 수정</dt>
+<dd>
+<p>키매퍼 메뉴에서 옵션 설정</p>
+</dd>
+</dl>
+<p>- fn2 toggle를 실행하여 fn2 레이어로 전환 해도 fn키를 누르면 이전 레이어가 계속 유지되는 버그 패치</p>
+<p><a href="/153/attachments/ps2avrGB_firmware_V1.0_140814.zip">ps2avrGB_firmware_V1.0_140814.zip</a></p>
+<p>- bootmapper client에서 밝기 조절시 바로 적용되지 않던 버그 수정</p>
+<p><a href="/153/attachments/ps2avrGB_firmware_V1.0_140802.zip">ps2avrGB_firmware_V1.0_140802.zip</a></p>
+<p>- rainbow fading이 제대로 작동하지 않던 버그 수정</p>
+<p><a href="/153/attachments/ps2avrGB_firmware_V1.0_140801.zip">ps2avrGB_firmware_V1.0_140801.zip</a></p>
+<p>- led off시 인디케이터들은 그대로 두도록 수정</p>
+<p>- 다수의 RGB LED를 사용시 과전류 현상을 방지하도록 수정</p>
+<p><a href="/153/attachments/ps2avrGB_firmware_V1.0_140727.zip">ps2avrGB_firmware_V1.0_140727.zip</a></p>
+<p>- RGB LED의 키 이벤트가 제대로 작동하지 않던 현상 패치</p>
+<p><a href="/153/attachments/ps2avrGB_firmware_V1.0_140724_1837.zip">ps2avrGB_firmware_V1.0_140724_1837.zip</a></p>
+<dl>
+<dt>- RGB LED 변환 타입 추가</dt>
+<dd>
+<p>rainbow 의 변환 타입을 추가했습니다.</p>
+</dd>
+</dl>
+<p>1. fading : 컬러가 서서히 변환 됩니다.(기존 방식)</p>
+<p>2. immediately : 변환 과정이 없이 컬러가 즉시 변경 됩니다.</p>
+<p>3. sequential : LED가 하나씩 변환 됩니다.</p>
+<p>- ps/2 led2 모드 변경 시 풀 엘이디와 함께 켜지는 경우가 있어 패치</p>
+<p><a href="/153/attachments/ps2avrGB_firmware_V1.0_140719.zip">ps2avrGB_firmware_V1.0_140719.zip</a></p>
+<p>- 절전 모드 전환시 먹통 현상 패치</p>
+<p><a href="/153/attachments/ps2avrGB_firmware_V1.0_140716.zip">ps2avrGB_firmware_V1.0_140716.zip</a></p>
+<p>- bootMapper Client의 업데이트가 있으므로 아래 링크의 내용 중 첨부파일을 업데이트 해주세요.</p>
+<p><a href="http://blog.winkeyless.kr/155">http://blog.winkeyless.kr/155</a></p>
+<p><a href="/153/attachments/ps2avrGB_firmware_V1.0_140705.zip">ps2avrGB_firmware_V1.0_140705.zip</a></p>
+<p>2014.7.5.</p>
+<dl>
+<dt>- RGB LED key event 추가</dt>
+<dd>
+<p>키 입력에 반응하는 2가지 이벤트를 추가했습니다.</p>
+</dd>
+<dd>
+<p>off, 색 지정, 보색 등 세 가지 옵션이 있습니다.</p>
+</dd>
+</dl>
+<p><a href="/153/attachments/ps2avrGB_firmware_V1.0_140630.zip">ps2avrGB_firmware_V1.0_140630.zip</a></p>
+<p><a href="/153/attachments/ps2avrGB_firmware_V1.0_140623.zip">ps2avrGB_firmware_V1.0_140623.zip</a></p>
+<p>- 첫 펌웨어</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">Winkeyless blog</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>B-Series PCB | Winkeyless blog</title>
+<meta name="keywords" content="">
+<meta name="description" content="
+[Photo Keyboard using B.87 PCB]
+
+[Photo: keyboard using B.87 PCB - 2]
+
+[Photo : Keyboard using B.pad PCB]
+
+[Photo : Keyboard using B.face PCB]
+
+[Photo : Keyboard using B.mini PCB]
+
+[Photo : Keyboard using B.87 EX PCB]
+One of the most noticible features of B-series PCB is the ability to freely change the color of RGB LED.
+Additionally you can set the keyboard functions as you wish by using “bootMapper Client” program for PC.">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/181/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.343cc480b9ffc8f04ccbe5e968ad674880cab773ec19905e93033065c1e7a804.css" integrity="sha256-NDzEgLn/yPBMy&#43;XpaK1nSIDKt3PsGZBekwMwZcHnqAQ=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/181/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Winkeyless blog (Alt + H)">Winkeyless blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="Winkeyless blog">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/categories" title="Category">
+                    <span>Category</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      B-Series PCB
+    </h1>
+    <div class="post-meta"><span title='2015-01-08 11:10:32 +0900 KST'>January 8, 2015</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p><img alt="DSC_0463.jpg" loading="lazy" src="/181/attachments/DSC_0463.jpg"></p>
+<p>[Photo Keyboard using B.87 PCB]</p>
+<p><img alt="DSC_0365.jpg" loading="lazy" src="/181/attachments/DSC_0365.jpg"></p>
+<p>[Photo: keyboard using B.87 PCB - 2]</p>
+<p><img alt="DSC_0416.jpg" loading="lazy" src="/181/attachments/DSC_0416.jpg"></p>
+<p>[Photo : Keyboard using B.pad PCB]</p>
+<p><img alt="DSC_0408.jpg" loading="lazy" src="/181/attachments/DSC_0408.jpg"></p>
+<p>[Photo : Keyboard using B.face PCB]</p>
+<p><img alt="DSC_0484.jpg" loading="lazy" src="/181/attachments/DSC_0484.jpg"></p>
+<p>[Photo : Keyboard using B.mini PCB]</p>
+<p><img alt="DSC_0495.jpg" loading="lazy" src="/181/attachments/DSC_0495.jpg"></p>
+<p>[Photo : Keyboard using B.87 EX PCB]</p>
+<p>One of the most noticible features of B-series PCB is the ability to freely change the color of RGB LED.</p>
+<p>Additionally you can set the keyboard functions as you wish by using “bootMapper Client” program for PC.</p>
+<p>New firmware “ps2avrGB” is the upgraded version of ps2avrU with the power to control RGB LED.</p>
+<p>And also you can customize and order the acrylic case easily.</p>
+<p>PCB Specifications</p>
+<ol>
+<li>
+<p>Layout(Common)</p>
+</li>
+<li>
+<p>winkeyed/winkeyless combo</p>
+</li>
+<li>
+<p>Supporting Caps Lock 3000/8000</p>
+</li>
+<li>
+<p>Supporting Masestouch Space Bar</p>
+</li>
+<li>
+<p>Supporting 1.75 right-shift</p>
+</li>
+<li>
+<p>ISO/ANSI</p>
+</li>
+</ol>
+<p>2. Layout(B.87 EX)</p>
+<ol>
+<li>
+<p>Can separate TenKey</p>
+</li>
+<li>
+<p>Able to switch between 2X TenKey and 1X*2 TenKey</p>
+</li>
+</ol>
+<p>3. Supports RGB LED</p>
+<ul>
+<li>pink/white/green/orange/blue/yellow/red</li>
+</ul>
+<p>4. Supports Full LED</p>
+<p>5. PCB : 1.6T</p>
+<p>6. All the parts placed at the back side of PCB</p>
+<p>7. Supporting Mount hole for case and plate</p>
+<p>8. Mac OS Compatible</p>
+<p>Firmware</p>
+<ol>
+<li>
+<p>ps2avrGB</p>
+</li>
+<li>
+<p>All the features of ps2avrU</p>
+</li>
+<li>
+<p>Can control RGB LED</p>
+</li>
+<li>
+<p>Easy Key Mapping</p>
+</li>
+<li>
+<p>Can register macro</p>
+</li>
+</ol>
+<p>2. ps2avrU</p>
+<ol>
+<li>
+<p>Interface : USB /PS2 combo</p>
+</li>
+<li>
+<p>NKRO &amp; 6KRO Support</p>
+</li>
+<li>
+<p>Supporting key map for 4-layer.</p>
+</li>
+<li>
+<p>Supporting all the multimedia keys.</p>
+</li>
+<li>
+<p>Supporting all special keys</p>
+</li>
+<li>
+<p>Supporting macro and key mapping</p>
+</li>
+<li>
+<p>Mac OS Compatible</p>
+</li>
+</ol>
+<p>Size</p>
+<ol>
+<li>B.87</li>
+</ol>
+<p>- Tenkeyless size</p>
+<p>2. B.87 EX</p>
+<p>- Full Size</p>
+<p>3. B.pad</p>
+<p>- TenKey size</p>
+<p>4. B.face</p>
+<p>- 60% of Poker size</p>
+<p>- Compatible with poker-x PCB</p>
+<p>5. B.thumb</p>
+<p>- 60% of Poker size</p>
+<p>- micro USB connector</p>
+<p>- PCB Thickness : 1.0T</p>
+<p>6. B.mini</p>
+<p>- MX-mini size</p>
+<p>7. B.mini EX</p>
+<p>- MX-mini size + tenkey</p>
+<h3 id="you-can-buy-rgb-led-and-parts-in-controllersub-mcu-by-selecting-options">You can buy RGB LED and parts in Controller(sub MCU) by selecting options.<a hidden class="anchor" aria-hidden="true" href="#you-can-buy-rgb-led-and-parts-in-controllersub-mcu-by-selecting-options">#</a></h3>
+<h3 id="pcb-and-parts-are-delivered-not-soldered-if-you-want-them-soldered-please-select-soldering-option">PCB and parts are delivered not soldered. If you want them soldered, please select soldering option.<a hidden class="anchor" aria-hidden="true" href="#pcb-and-parts-are-delivered-not-soldered-if-you-want-them-soldered-please-select-soldering-option">#</a></h3>
+<p>RGB bar</p>
+<p>- Can add RGB Effect of the back side of the keyboard</p>
+<p>- Delivered in one-line, not separated as you order.</p>
+<p>- White.</p>
+<p>- Recommended Length according to PCB</p>
+<p>B.87 EX : 12</p>
+<p>B.87 : 10</p>
+<p>B.mini EX : 11</p>
+<p>B.mini : 9 (PCB has 8, but 9 is better due to different space)</p>
+<p>B.face : 8</p>
+<p>B.thumb : 8</p>
+<p>B.pad : 2</p>
+<p><img alt="DSC_0808.jpg" loading="lazy" src="/181/attachments/DSC_0808.jpg"></p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">Winkeyless blog</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

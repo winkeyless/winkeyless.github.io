@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>ps2avrU V1.6 펌웨어 업데이트 | Winkeyless blog</title>
+<meta name="keywords" content="">
+<meta name="description" content="펌웨어 링크 : http://blog.winkeyless.kr/17
+2014.1.28.
+
+- FN2 toggle 표시 LED 변경
+
+기존에 지속적으로 N/L이 점멸하는 방식에서 변경시 1회만 깜박이는 방식으로 변경
+
+
+toggle on/off를 caps lock/num lock LED의 깜박임 수로 표시합니다.
+
+
+on/off 각 2번/1번 점멸 합니다.
+
+- lock key/win 키 추가
+
+Lock Key 키는 키보드의 모든 입력을 차단합니다.
+
+
+Lock Win 키는 좌/우 윈도우 키의 입력을 차단합니다.
+
+
+두 키 모두 토글 방식으로 작동하며, 전원이 차단되면 모두 off 상태(차단하지 않는 상태)가 됩니다.
+
+- custom macro 지원
+
+U.CON을 이용하여 패드 등을 사용할 때 하드웨어 매크로를 실행할 수 없거나, 실행을 했더라도 매크로 등록을 할 수 있는 키들이 없을 경우를 위한 외부에서 매크로를 설정하여 부트로더로 키보드에 저장할 수 있는 방법입니다.">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/124/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.343cc480b9ffc8f04ccbe5e968ad674880cab773ec19905e93033065c1e7a804.css" integrity="sha256-NDzEgLn/yPBMy&#43;XpaK1nSIDKt3PsGZBekwMwZcHnqAQ=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/124/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Winkeyless blog (Alt + H)">Winkeyless blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="Winkeyless blog">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/categories" title="Category">
+                    <span>Category</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      ps2avrU V1.6 펌웨어 업데이트
+    </h1>
+    <div class="post-meta"><span title='2014-01-28 05:53:59 +0900 KST'>January 28, 2014</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>펌웨어 링크 : <a href="http://blog.winkeyless.kr/17">http://blog.winkeyless.kr/17</a></p>
+<p>2014.1.28.</p>
+<dl>
+<dt>- FN2 toggle 표시 LED 변경</dt>
+<dd>
+<p>기존에 지속적으로 N/L이 점멸하는 방식에서 변경시 1회만 깜박이는 방식으로 변경</p>
+</dd>
+<dd>
+<p>toggle on/off를 caps lock/num lock LED의 깜박임 수로 표시합니다.</p>
+</dd>
+<dd>
+<p>on/off 각 2번/1번 점멸 합니다.</p>
+</dd>
+<dt>- lock key/win 키 추가</dt>
+<dd>
+<p>Lock Key 키는 키보드의 모든 입력을 차단합니다.</p>
+</dd>
+<dd>
+<p>Lock Win 키는 좌/우 윈도우 키의 입력을 차단합니다.</p>
+</dd>
+<dd>
+<p>두 키 모두 토글 방식으로 작동하며, 전원이 차단되면 모두 off 상태(차단하지 않는 상태)가 됩니다.</p>
+</dd>
+<dt>- custom macro 지원</dt>
+<dd>
+<p>U.CON을 이용하여 패드 등을 사용할 때 하드웨어 매크로를 실행할 수 없거나, 실행을 했더라도 매크로 등록을 할 수 있는 키들이 없을 경우를 위한 외부에서 매크로를 설정하여 부트로더로 키보드에 저장할 수 있는 방법입니다.</p>
+</dd>
+<dd>
+<p>부트 매퍼 사이트에 추가된 &ldquo;Custom Macro&quot;탭을 이용하여 매크로를 편집 후 .hex파일을 생성하고 부트로더를 이용해 키보드에 업로드합니다.</p>
+</dd>
+<dd>
+<p>커스텀 매크로를 작동시킬 수 있는 새로운 12개의 키가 추가되었습니다. (CST Mac1~12)</p>
+</dd>
+</dl>
+<p>- Custom Macro 사용 방법</p>
+<p><a href="http://blog.winkeyless.kr/125">http://blog.winkeyless.kr/125</a></p>
+<p>윈도우즈 OS의 멀티미디어 키가 작동하지 않는 경우 아래 링크의 설명을 참고하여 드라이버 업데이트를 해주세요.</p>
+<p><a href="http://blog.winkeyless.kr/110">http://blog.winkeyless.kr/110</a></p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">Winkeyless blog</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

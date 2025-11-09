@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Firmware Installing and Setting | Winkeyless blog</title>
+<meta name="keywords" content="">
+<meta name="description" content="
+bootMapperClient
+
+
+For Window
+
+- Download : https://www.dropbox.com/s/3bn9flirkb49ahz/BootMapperClient.zip?dl=0
+- Unzipping
+
+
+Download bootMapperClient.zip And unzip.
+
+
+After unzipping, you can see the directory like a picture below.
+
+
+
+
+For Mac
+
+- Download : https://www.dropbox.com/s/wselndg19ofby85/BootMapperClient.mac.zip?dl=0
+2. Downloading Firmware
+- Link : http://blog.winkeyless.kr/153
+
+
+Download ps2avrGB_firmware_Vx.x.x_YYMMDD.zip
+
+
+When unzipping 4 hex files appear. - ps2avrGB_NKRO.hex : Firmware - keymap_gb_B87(EX).hex : Key map for B.87, B.87 EX, B.mini, B.mini EX - keymap_gb_face_thumb.hex : Key map for B.face, B.thumb - keymap_gb_pad.hex : Key map for B.pad">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/183/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.343cc480b9ffc8f04ccbe5e968ad674880cab773ec19905e93033065c1e7a804.css" integrity="sha256-NDzEgLn/yPBMy&#43;XpaK1nSIDKt3PsGZBekwMwZcHnqAQ=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/183/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Winkeyless blog (Alt + H)">Winkeyless blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="Winkeyless blog">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/categories" title="Category">
+                    <span>Category</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Firmware Installing and Setting
+    </h1>
+    <div class="post-meta"><span title='2015-01-12 17:04:14 +0900 KST'>January 12, 2015</span>
+
+</div>
+  </header> 
+  <div class="post-content"><ol>
+<li>bootMapperClient</li>
+</ol>
+<ol>
+<li>For Window</li>
+</ol>
+<p>- Download : <a href="https://www.dropbox.com/s/3bn9flirkb49ahz/BootMapperClient.zip?dl=0">https://www.dropbox.com/s/3bn9flirkb49ahz/BootMapperClient.zip?dl=0</a></p>
+<p>- Unzipping</p>
+<ul>
+<li>
+<p>Download bootMapperClient.zip And unzip.</p>
+</li>
+<li>
+<p>After unzipping, you can see the directory like a picture below.</p>
+</li>
+</ul>
+<p><img alt="20140925_210842_002.png" loading="lazy" src="/183/attachments/20140925_210842_002.png"></p>
+<ol start="2">
+<li>For Mac</li>
+</ol>
+<p>- Download : <a href="https://www.dropbox.com/s/wselndg19ofby85/BootMapperClient.mac.zip?dl=0">https://www.dropbox.com/s/wselndg19ofby85/BootMapperClient.mac.zip?dl=0</a></p>
+<p>2. Downloading Firmware</p>
+<p>- Link : <a href="http://blog.winkeyless.kr/153">http://blog.winkeyless.kr/153</a></p>
+<ul>
+<li>
+<p>Download ps2avrGB_firmware_Vx.x.x_YYMMDD.zip</p>
+</li>
+<li>
+<p>When unzipping 4 hex files appear. - ps2avrGB_NKRO.hex : Firmware - keymap_gb_B87(EX).hex : Key map for B.87, B.87 EX, B.mini, B.mini EX - keymap_gb_face_thumb.hex : Key map for B.face, B.thumb - keymap_gb_pad.hex : Key map for B.pad</p>
+</li>
+</ul>
+<p>3. How to upload firmware</p>
+<ul>
+<li>
+<p>Supporting both for Window and Mac OS</p>
+</li>
+<li>
+<p>Available only while connected by USB</p>
+</li>
+<li>
+<p>First of all you must upload firmware to enable all the functions properly.(When MCU was attached to the PCB by soldering, bootloader was automatically installed.)</p>
+</li>
+</ul>
+<ol>
+<li>Start bootMapperClient.exe</li>
+</ol>
+<ol start="2">
+<li>Select “Options &gt; firm up(select hex file)” and select firmware file.</li>
+</ol>
+<p><img alt="20140623_051243_001.png" loading="lazy" src="/183/attachments/20140623_051243_001.png"></p>
+<p><img alt="20140623_051308_002.png" loading="lazy" src="/183/attachments/20140623_051308_002.png"></p>
+<p><img alt="20140623_051314_003.png" loading="lazy" src="/183/attachments/20140623_051314_003.png"></p>
+<p>- After automatically starting bootloader, keyboard works again.</p>
+<p>- If bootloader doesn’t start again, you have to start in manually. While pressing the key “Left ctlr”(in case of B.pad the key “0”), connect USB cable. Then bootloader will start again.</p>
+<p>4. How to set RGB LED</p>
+<ul>
+<li>Just select “Options &gt; connect”</li>
+</ul>
+<p><img alt="20150807_005819_001.png" loading="lazy" src="/183/attachments/20150807_005819_001.png"></p>
+<p>- When you click “connect”, keyboard switch LEDs will be off.</p>
+<p>- When you click &ldquo;disconnect&rdquo;, keyboard switch LEDs will be on and setting mode will be disconnected.</p>
+<p>- Num of LEDs : The amount of RGB LED in PCB</p>
+<p>- LED mode selection and color setting : Choose LED mode and set Color.(you can use hexa code to define color you want. ex, FF3300)</p>
+<p>- Brightness : Can set the brightness of RGB LED by using slider. The brighter RGB LED, the darker switch LED.</p>
+<p>5. How to map keys</p>
+<ol>
+<li>
+<p>Select “Key Mapper” tab</p>
+</li>
+<li>
+<p>If it’s the first time to map keys.</p>
+</li>
+</ol>
+<p>2-1) Click the button labeled &ldquo;load keymap_part.hex or .json&rdquo; and load basic Key mapping file included in the firmware.</p>
+<p>2-2) Select “upload” button, and then key map will be loaded after bootloader starts.</p>
+<ul>
+<li>
+<p>If you choose “reboot after uploading”, automatically it will enable the keyboard. If not, stay in the state of bootloader.</p>
+</li>
+<li>
+<p>If you want to enable the keyboard manually, just select “Options&gt;set keyboard” button</p>
+</li>
+</ul>
+<p>2-3) If you want to change key settings, click “toggle bootmapper” button.</p>
+<p>2-4) If you press a key, a red light appear on matrix.</p>
+<p>2-5) Just select the key code you want.</p>
+<p>2-6) When you change all the keys, select “upload” button to upload settings.</p>
+<ol start="3">
+<li>When you want to change the settings for only several keys from key-mapped keyboard.</li>
+</ol>
+<p>3-1) Select “download” button, so download key-map. After that you will see the col/row data table.</p>
+<p>3-2) Start bootMapper by clicking “toggle bootmapper”.</p>
+<p>3-3) After pressing a keyboard you want to change, select the col/row and keycode value.</p>
+<p>3-4) By selection “toggle bootmapper”, stop bootMapper.</p>
+<p>6. Custom Macro</p>
+<ul>
+<li>
+<p>You can define maximum 12 Custom Macros.</p>
+</li>
+<li>
+<p>A macro can have up to 42 characters.</p>
+</li>
+</ul>
+<ol>
+<li>
+<p>Start bootMapper Client progrma</p>
+</li>
+<li>
+<p>Select “Custom Macro” tab.</p>
+</li>
+</ol>
+<p><img alt="20140128_165148_001.png" loading="lazy" src="/183/attachments/20140128_165148_001.png"></p>
+<ol start="3">
+<li>You can see the display below</li>
+</ol>
+<ul>
+<li>
+<p>Select CstMacX tab(CstMac stands for “Custom Macro”.) and enter Characters you want.</p>
+</li>
+<li>
+<p>You can delete a selected character by pressing “remove” button.</p>
+</li>
+<li>
+<p>You can change order by dragging a character.</p>
+</li>
+</ul>
+<p><img loading="lazy" src="https://lh4.googleusercontent.com/4K_tqvwgatRBzoR5GcixYFuWv1PnyhvefjRydtofW4vGJHbPi3PGJ7zzlpg_Evqsgx9hwVEwFJ1_JS9784wOonWp-XZ71euzyajebsony_1oS09eIqwyZSUjNRgCUFR4_A"></p>
+<ol start="4">
+<li>Select “save macro.hex” to save Macro setting.</li>
+</ol>
+<ul>
+<li>When you upload this file to keyboard using bootloader.</li>
+</ul>
+<ol start="5">
+<li>If you want to combine modifier keys as a macro, follow the instructions.(Example shows how to set “Ctrl+c” macro.)</li>
+</ol>
+<ul>
+<li>Add all the keys you want to use as a macro.</li>
+</ul>
+<p><img alt="20140128_165432_003.png" loading="lazy" src="/183/attachments/20140128_165432_003.png"></p>
+<p>- While LCtrl selected, press the “split” button.(or shift + mouse click)</p>
+<p><img alt="20140128_165449_004.png" loading="lazy" src="/183/attachments/20140128_165449_004.png"></p>
+<p>- You will see the splited LCtrl into down and up.</p>
+<p><img alt="20140128_165501_005.png" loading="lazy" src="/183/attachments/20140128_165501_005.png"></p>
+<p>- Just drag anything to place “C” is in the middle between LCtrl(down) and LCtrl(up).</p>
+<p><img alt="20140128_165527_006.png" loading="lazy" src="/183/attachments/20140128_165527_006.png"></p>
+<p><img alt="20140128_165557_007.png" loading="lazy" src="/183/attachments/20140128_165557_007.png"></p>
+<ol start="6">
+<li>You can set the delay for a macro.</li>
+</ol>
+<p>- Selecte the key you want.</p>
+<p>- Enter time(min 0.1 sec, max 5 secs)</p>
+<p>- Press “apply delay” button</p>
+<p><img alt="20140214_161045_002.png" loading="lazy" src="/183/attachments/20140214_161045_002.png"></p>
+<p><img alt="20140214_161112_003.png" loading="lazy" src="/183/attachments/20140214_161112_003.png"></p>
+<ol start="7">
+<li>Text To Macro</li>
+</ol>
+<ul>
+<li>The text entered can be translated into a macro</li>
+</ul>
+<p>- Enter the text you want to us as a macro in the text box &ldquo;String Parsing&rdquo;</p>
+<p><img alt="20141004_021911_002.png" loading="lazy" src="/183/attachments/20141004_021911_002.png"></p>
+<ul>
+<li>press “parse string &raquo;” button, and then you can see all the keys splited.</li>
+</ul>
+<p><img alt="20141004_021923_003.png" loading="lazy" src="/183/attachments/20141004_021923_003.png"></p>
+<p>- Available texts</p>
+<p>Normal Texts : `1234567890-=qwertyuiop[]\asdfghjkl;&lsquo;zxcvbnm,./</p>
+<p>Shift+Texts : ~!@#$%^&amp;*()_+QWERTYUIOP{}|ASDFGHJKL:&ldquo;ZXCVBNM&lt;&gt;?</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">Winkeyless blog</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

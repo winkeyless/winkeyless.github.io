@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>A.87U 기판 조립 가이드 | Winkeyless blog</title>
+<meta name="keywords" content="">
+<meta name="description" content="- A.87U 기판은 미조립 상태로 배송됩니다. 본 포스트의 사진은 참고를 위해 조립(납땜) 후 촬영한 것입니다.
+- MCU에는 부트로더만 설치되어 있으므로 납땜을 완료 한 후 반드시 펌웨어를 업로드 해줘야 합니다.
+이 큰 사진으로 설명하고 나머지 사진들은 참고용으로 남기겠습니다.
+(사진을 클릭하면 커집니다.)
+
+- 저항(R)들은 사진과 같은 위치에 납땜 해주면 됩니다. 방향성은 없습니다.
+- 캐패시터(C)중 탄탈 캐패시터(C1)은 방향성이 있으므로 반드시 사진과 같은 방향으로 납땜 해 줍니다. 나머지들(C2~4)은 색을 구분(C2가 더 진한 컬러)하여 사진과 같은 위치에 납땜 해줍니다. (C1은 소자 컬러가 검정색인 것도 있습니다. 아래 V0.2 사진 참조)">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/40/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.343cc480b9ffc8f04ccbe5e968ad674880cab773ec19905e93033065c1e7a804.css" integrity="sha256-NDzEgLn/yPBMy&#43;XpaK1nSIDKt3PsGZBekwMwZcHnqAQ=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/40/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Winkeyless blog (Alt + H)">Winkeyless blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="Winkeyless blog">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/categories" title="Category">
+                    <span>Category</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      A.87U 기판 조립 가이드
+    </h1>
+    <div class="post-meta"><span title='2013-09-10 01:32:08 +0900 KST'>September 10, 2013</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>- A.87U 기판은 미조립 상태로 배송됩니다. 본 포스트의 사진은 참고를 위해 조립(납땜) 후 촬영한 것입니다.</p>
+<p>- MCU에는 부트로더만 설치되어 있으므로 납땜을 완료 한 후 반드시 펌웨어를 업로드 해줘야 합니다.</p>
+<p>이 큰 사진으로 설명하고 나머지 사진들은 참고용으로 남기겠습니다.</p>
+<p>(사진을 클릭하면 커집니다.)</p>
+<p><img alt="DSC_9808.jpg" loading="lazy" src="/40/attachments/DSC_9808.jpg"></p>
+<p>- 저항(R)들은 사진과 같은 위치에 납땜 해주면 됩니다. 방향성은 없습니다.</p>
+<p>- 캐패시터(C)중 탄탈 캐패시터(C1)은 방향성이 있으므로 반드시 사진과 같은 방향으로 납땜 해 줍니다. 나머지들(C2~4)은 색을 구분(C2가 더 진한 컬러)하여 사진과 같은 위치에 납땜 해줍니다. (C1은 소자 컬러가 검정색인 것도 있습니다. 아래 V0.2 사진 참조)</p>
+<p>- 크리스탈(Y1)은 사진과 같이 숫자(12.000)가 보이도록 납땜 해주면됩니다. 접점 4곳 중 1곳에 표시가 되어 있지만, 사실 돌아가도 문제는 없습니다.</p>
+<p>(사진과는 다른 은색 컬러의 크리스탈이 포함되어 있을 수 있습니다.)</p>
+<p>- 제너다이오드(ZD1~2)는 방향성이 있으므로 반드시 사진과 같은 방향으로 납땜 해 줍니다. (위 사진으로 확인이 어렵다면 아래의 사진을 참조하세요.)</p>
+<p>- 트랜지스터 (N1~3)는 사진과 같은 방향으로 납땜 해줍니다.</p>
+<p>- MCU(IC1)도 방향성이 있으므로 반드시 사진과 같은 방향으로 납땜을 해야합니다.</p>
+<p><img alt="DSC_9817.jpg" loading="lazy" src="/40/attachments/DSC_9817.jpg"></p>
+<p>- 제너다이오드(ZD1~2)의 소자 방향을 참고하세요.</p>
+<p><img alt="DSC_9818.jpg" loading="lazy" src="/40/attachments/DSC_9818.jpg"></p>
+<p>- Num lock LED과 Scroll lock LED는 선택에 따라 full LED로 사용할 수 있습니다.</p>
+<p>- 위 사진과 같이 저항을 가로로 납땜 해주면 각 상태에 따른 인디케이터로 사용되며, 세로로 납땜 해주면 full LED와 연동되어 표시됩니다.</p>
+<p>- 단, Scroll lock LED를 별도(사진과 같이) 표시하려면 펌웨어 중 &ldquo;keymain_NKRO_SL_apart.hex&rdquo; 파일을 이용해야 합니다.</p>
+<p>- 펌웨어의 각 파일에 대한 설명 참조 : <a href="http://blog.winkeyless.kr/17">http://blog.winkeyless.kr/17</a></p>
+<p><img alt="DSC_9821.jpg" loading="lazy" src="/40/attachments/DSC_9821.jpg"></p>
+<p>-&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash; 이하 V0.92 &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</p>
+<p>이 큰 사진으로 설명하고 나머지 사진들은 참고용으로 남기겠습니다.</p>
+<p>(사진을 클릭하면 커집니다.)</p>
+<p><img alt="DSC_9732.jpg" loading="lazy" src="/40/attachments/DSC_9732.jpg"></p>
+<p>- 저항(R)들은 사진과 같은 위치에 납땜 해주면 됩니다. 방향성은 없습니다.</p>
+<p>- 캐패시터(C)중 탄탈 캐패시터(C1)은 방향성이 있으므로 반드시 사진과 같은 방향으로 납땜 해 줍니다. 나머지들(C2~4)은 색을 구분(C2가 더 진한 컬러)하여 사진과 같은 위치에 납땜 해줍니다. (C1은 소자 컬러가 검정색인 것도 있습니다. 아래 V0.2 사진 참조)</p>
+<p>- 크리스탈(Y)은 사진과 같이 숫자(12.000)가 보이도록 납땜 해주면됩니다. 접점 4곳 중 1곳에 표시가 되어 있지만, 사실 돌아가도 문제는 없습니다.</p>
+<p>- 제너다이오드(ZD1~2)는 방향성이 있으므로 반드시 사진과 같은 방향으로 납땜 해 줍니다.</p>
+<p>- 트랜지스터 (N1~3)는 사진과 같은 방향으로 납땜 해줍니다.</p>
+<p>- MCU(IC1)도 방향성이 있으므로 반드시 사진과 같은 방향으로 납땜을 해야합니다.</p>
+<dl>
+<dt>- V0.92는 Scroll Lock LED를 별도로 선택 표시할 수 있습니다.</dt>
+<dd>
+<p>R8 부분에 가로로 저항을 납땜 해주면 Scroll Lock on/off에 따라서 LED가 점멸 됩니다.</p>
+</dd>
+<dt>(이 경우 펌웨어는 keymain_NKRO_SL_apart.hex를 이용해주세요. 펌웨어 링크 : <a href="http://blog.winkeyless.kr/17">http://blog.winkeyless.kr/17</a> )</dt>
+<dd>
+<p>다른 Full LED 저항 처럼 세로로 납땜 해주면 Full LED 중 하나로 작동하게 됩니다.</p>
+</dd>
+</dl>
+<p><img alt="DSC_9733.jpg" loading="lazy" src="/40/attachments/DSC_9733.jpg"></p>
+<p>이외 다른 부분은 V0.2와 공통적으로 적용되므로 아래 내용을 참고하세요.</p>
+<p>-&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash; 이하 V0.2 &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</p>
+<p>이 큰 사진으로 설명하고 나머지 사진들은 참고용으로 남기겠습니다.</p>
+<p>(사진을 클릭하면 커집니다.)</p>
+<p><img alt="DSC_9452.jpg" loading="lazy" src="/40/attachments/DSC_9452.jpg"></p>
+<p>- 저항(R)들은 사진과 같은 위치에 납땜 해주면 됩니다. 방향성은 없습니다.</p>
+<p>- 캐패시터(C)중 탄탈 캐패시터(C1)은 방향성이 있으므로 반드시 사진과 같은 방향으로 납땜 해 줍니다. 나머지들(C2~4)은 사진과 같은 위치에 납땜 해줍니다.</p>
+<p>- 크리스탈(Y)은 사진과 같이 숫자(12.000)가 보이도록 납땜 해주면됩니다. 접점 4곳 중 1곳에 표시가 되어 있지만, 사실 돌아가도 문제는 없습니다.</p>
+<p>- 제너다이오드(ZD1<del>2)와 트랜지스터 (N1</del>3)는 사진과 같은 방향으로 납땜 해줍니다. 모양이 똑같습니다만, 소자수가 각각 2개와 3개로 다르므로 섞이지 않도록 잘 구분해서 납땜 해줍니다. (사진을 확대해서 자세히 보시면 프린트된 글자가 다릅니다.)</p>
+<p>- MCU(IC1)도 방향성이 있으므로 반드시 사진과 같은 방향으로 납땜을 해야합니다.</p>
+<p><img alt="DSC_9451.jpg" loading="lazy" src="/40/attachments/DSC_9451.jpg"></p>
+<p>- 뒷면의 다이오드나 Full LED를 위한 칩저항(2012size)는 아래 사진과 같이 땜을 합니다. 칩저항은 극성이 상관없지만, 다이오드는 극성에 주의해야합니다. 칩저항의 LED 컬러별 저항값은 자료실의 내용을 참고하세요.</p>
+<p>- <a href="http://blog.winkeyless.kr/entry/A87U-%EA%B8%B0%ED%8C%90-%EA%B4%80%EB%A0%A8-%EC%9E%90%EB%A3%8C">http://blog.winkeyless.kr/entry/A87U-%EA%B8%B0%ED%8C%90-%EA%B4%80%EB%A0%A8-%EC%9E%90%EB%A3%8C</a></p>
+<p><img alt="DSC_9466.jpg" loading="lazy" src="/40/attachments/DSC_9466.jpg"></p>
+<p><img alt="DSC_9453.jpg" loading="lazy" src="/40/attachments/DSC_9453.jpg"></p>
+<p>- USB 커넥터의 위치는 기판의 윗면입니다. (DIP 타입 소자이기 때문에 위치는 윗면 납땜은 아랫면에서 해줍니다.)</p>
+<p><img alt="DSC_9438.jpg" loading="lazy" src="/40/attachments/DSC_9438.jpg"></p>
+<p>- 한 가지 주의해야할 부분으로 윈키리스로 사용할 경우 R Alt키의 다이오드는 스위치가 실장되는 곳이 아닌 윈키의 R Alt 부분에 납땜을 해야합니다.</p>
+<p><img alt="DSC_9465.jpg" loading="lazy" src="/40/attachments/DSC_9465.jpg"></p>
+<p><img alt="DSC_9439.jpg" loading="lazy" src="/40/attachments/DSC_9439.jpg"></p>
+<p><img alt="DSC_9440.jpg" loading="lazy" src="/40/attachments/DSC_9440.jpg"></p>
+<p><img alt="DSC_9441.jpg" loading="lazy" src="/40/attachments/DSC_9441.jpg"></p>
+<p><img alt="DSC_9442.jpg" loading="lazy" src="/40/attachments/DSC_9442.jpg"></p>
+<p><img alt="DSC_9443.jpg" loading="lazy" src="/40/attachments/DSC_9443.jpg"></p>
+<p><img alt="DSC_9445.jpg" loading="lazy" src="/40/attachments/DSC_9445.jpg"></p>
+<p><img alt="DSC_9446.jpg" loading="lazy" src="/40/attachments/DSC_9446.jpg"></p>
+<p><img alt="DSC_9449.jpg" loading="lazy" src="/40/attachments/DSC_9449.jpg"></p>
+<h3 id="키보드-사용법-ps2avru--httpblogwinkeylesskrentryps2avru">키보드 사용법 (ps2avrU) : <a href="http://winkeyless.kr/entry/ps2avrU">http://blog.winkeyless.kr/entry/ps2avrU</a><a hidden class="anchor" aria-hidden="true" href="#키보드-사용법-ps2avru--httpblogwinkeylesskrentryps2avru">#</a></h3>
+<h3 id="기판-관련-자료실--httpblogwinkeylesskrentrya87u-eab8b0ed8c90-eab480eba0a8-ec9e90eba38c">기판 관련 자료실 : <a href="http://winkeyless.kr/entry/A87U-%EA%B8%B0%ED%8C%90-%EA%B4%80%EB%A0%A8-%EC%9E%90%EB%A3%8C">http://blog.winkeyless.kr/entry/A87U-%EA%B8%B0%ED%8C%90-%EA%B4%80%EB%A0%A8-%EC%9E%90%EB%A3%8C</a><a hidden class="anchor" aria-hidden="true" href="#기판-관련-자료실--httpblogwinkeylesskrentrya87u-eab8b0ed8c90-eab480eba0a8-ec9e90eba38c">#</a></h3>
+<h3 id="납땜을-완료-했다면-부트로더를-이용해-펌웨어를-업로드해야-키보드로-작동합니다">납땜을 완료 했다면 부트로더를 이용해 펌웨어를 업로드해야 키보드로 작동합니다.<a hidden class="anchor" aria-hidden="true" href="#납땜을-완료-했다면-부트로더를-이용해-펌웨어를-업로드해야-키보드로-작동합니다">#</a></h3>
+<p>- <a href="http://blog.winkeyless.kr/18">http://blog.winkeyless.kr/18</a></p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">Winkeyless blog</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
