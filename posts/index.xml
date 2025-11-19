@@ -1124,18 +1124,26 @@
       <link>https://blog.winkeyless.kr/154/</link>
       <pubDate>Mon, 23 Jun 2014 04:52:08 +0900</pubDate>
       <guid>https://blog.winkeyless.kr/154/</guid>
-      <description>&lt;h3 id=&#34;bootmapper-client는-ps2avrgb-펌웨어가-사용된-b-시리즈-기판에서-모든-기능을-사용할-수-있습니다&#34;&gt;Bootmapper Client는 ps2avrGB 펌웨어가 사용된 B 시리즈 기판에서 모든 기능을 사용할 수 있습니다.&lt;/h3&gt;
+      <description>&lt;blockquote&gt;
+&lt;h3 id=&#34;bootmapper-client는-ps2avrgb-펌웨어가-사용된-b-시리즈-기판에서-모든-기능을-사용할-수-있습니다&#34;&gt;Bootmapper Client는 ps2avrGB 펌웨어가 사용된 B 시리즈 기판에서 모든 기능을 사용할 수 있습니다.&lt;/h3&gt;
 &lt;h3 id=&#34;usb-인터페이스로-연결-된-상태에서만-작동이-됩니다&#34;&gt;USB 인터페이스로 연결 된 상태에서만 작동이 됩니다.&lt;/h3&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;Bootmapper Client 다운로드 : &lt;a href=&#34;http://blog.winkeyless.kr/155&#34;&gt;http://blog.winkeyless.kr/155&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;- BootmapperClient 를 실행합니다.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;* 펌웨어 업로드 방법&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;- 처음 납땜 후 키보드에는 부트로더만 설치되어 있으므로 반드시 펌웨어 업로드를 해줘야 다른 모든 기능이 작동 됩니다.&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;BootmapperClient 를 실행합니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;펌웨어-업로드-방법&#34;&gt;펌웨어 업로드 방법&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;처음 납땜 후 키보드에는 부트로더만 설치되어 있으므로, 반드시 펌웨어 업로드를 해줘야 다른 모든 기능이 작동 됩니다.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;&amp;ldquo;Options&amp;rdquo; 탭으로 이동하여 &amp;ldquo;firm up(select .hex file)&amp;rdquo; 버튼을 클릭해 업로드할 펌웨어 파일을 선택해 줍니다.&lt;/p&gt;
 &lt;p&gt;ps2avrGB 펌웨어 : &lt;a href=&#34;http://blog.winkeyless.kr/153&#34;&gt;http://blog.winkeyless.kr/153&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img alt=&#34;20140623_051243_001.png&#34; loading=&#34;lazy&#34; src=&#34;https://blog.winkeyless.kr/154/attachments/20140623_051243_001.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img alt=&#34;20140623_051308_002.png&#34; loading=&#34;lazy&#34; src=&#34;https://blog.winkeyless.kr/154/attachments/20140623_051308_002.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img alt=&#34;20140623_051314_003.png&#34; loading=&#34;lazy&#34; src=&#34;https://blog.winkeyless.kr/154/attachments/20140623_051314_003.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;- 자동으로 부트로더로 진입하고 펌웨어를 업데이트 한 후 다시 키보드가 작동합니다.&lt;/p&gt;</description>
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;자동으로 부트로더로 진입하고 펌웨어를 업데이트 한 후 다시 키보드가 작동합니다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>ps2avrGB firmware</title>
