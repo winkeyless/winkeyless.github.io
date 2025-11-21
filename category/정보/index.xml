@@ -19,7 +19,7 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.nirsoft.net/utils/usb_devices_view.html#DownloadLinks&#34;&gt;http://www.nirsoft.net/utils/usb_devices_view.html#DownloadLinks&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt=&#34;20160719_120635_002.png&#34; loading=&#34;lazy&#34; src=&#34;../225/attachments/20160719_120635_002.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;20160719_120635_002.png&#34; loading=&#34;lazy&#34; src=&#34;https://blog.winkeyless.kr/225/attachments/20160719_120635_002.png&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;다운로드한 프로그램을 인스톨합니다.&lt;/p&gt;
@@ -29,11 +29,11 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;다른 드라이버가 선택되지않도록 조심하세요.&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt=&#34;20160719_120955_004.png&#34; loading=&#34;lazy&#34; src=&#34;../225/attachments/20160719_120955_004.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;20160719_120955_004.png&#34; loading=&#34;lazy&#34; src=&#34;https://blog.winkeyless.kr/225/attachments/20160719_120955_004.png&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;마우스의 오른쪽 버튼을 눌러 나오는 메뉴에서 &amp;ldquo;Uninstall Selected Devices&amp;quot;를 선택합니다.&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;20160719_121015_006.png&#34; loading=&#34;lazy&#34; src=&#34;../225/attachments/20160719_121015_006.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;20160719_121015_006.png&#34; loading=&#34;lazy&#34; src=&#34;https://blog.winkeyless.kr/225/attachments/20160719_121015_006.png&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;키보드를 다시 연결합니다.&lt;/p&gt;
@@ -406,7 +406,7 @@
 &lt;ul&gt;
 &lt;li&gt;BootmapperClient 를 실행합니다.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;펌웨어-업로드-방법&#34;&gt;펌웨어 업로드 방법&lt;/h3&gt;
+&lt;h2 id=&#34;펌웨어-업로드-방법&#34;&gt;펌웨어 업로드 방법&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;처음 납땜 후 키보드에는 부트로더만 설치되어 있으므로, 반드시 펌웨어 업로드를 해줘야 다른 모든 기능이 작동 됩니다.&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
