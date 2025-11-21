@@ -6,20 +6,27 @@
     <description>Recent content in Category on Winkeyless blog</description>
     <generator>Hugo -- 0.152.2</generator>
     <language>ko_KR</language>
-    <lastBuildDate>Sat, 21 May 2016 14:51:58 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 12 Apr 2020 11:47:00 +0900</lastBuildDate>
     <atom:link href="https://blog.winkeyless.kr/category/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>자료실/Bootmapper Client</title>
-      <link>https://blog.winkeyless.kr/category/%EC%9E%90%EB%A3%8C%EC%8B%A4/bootmapper-client/</link>
-      <pubDate>Sat, 21 May 2016 14:51:58 +0900</pubDate>
-      <guid>https://blog.winkeyless.kr/category/%EC%9E%90%EB%A3%8C%EC%8B%A4/bootmapper-client/</guid>
+      <title>자료실</title>
+      <link>https://blog.winkeyless.kr/category/%EC%9E%90%EB%A3%8C%EC%8B%A4/</link>
+      <pubDate>Sun, 12 Apr 2020 11:47:00 +0900</pubDate>
+      <guid>https://blog.winkeyless.kr/category/%EC%9E%90%EB%A3%8C%EC%8B%A4/</guid>
       <description></description>
     </item>
     <item>
       <title>자료실/펌웨어</title>
       <link>https://blog.winkeyless.kr/category/%EC%9E%90%EB%A3%8C%EC%8B%A4/%ED%8E%8C%EC%9B%A8%EC%96%B4/</link>
-      <pubDate>Fri, 20 May 2016 00:25:17 +0900</pubDate>
+      <pubDate>Sun, 12 Apr 2020 11:47:00 +0900</pubDate>
       <guid>https://blog.winkeyless.kr/category/%EC%9E%90%EB%A3%8C%EC%8B%A4/%ED%8E%8C%EC%9B%A8%EC%96%B4/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>자료실/Bootmapper Client</title>
+      <link>https://blog.winkeyless.kr/category/%EC%9E%90%EB%A3%8C%EC%8B%A4/bootmapper-client/</link>
+      <pubDate>Sat, 21 May 2016 14:51:58 +0900</pubDate>
+      <guid>https://blog.winkeyless.kr/category/%EC%9E%90%EB%A3%8C%EC%8B%A4/bootmapper-client/</guid>
       <description></description>
     </item>
     <item>

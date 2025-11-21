@@ -31,6 +31,19 @@
 &lt;p&gt;fuse bit : hfuse = 0xD0, lfuse = 0x0F&lt;/p&gt;</description>
     </item>
     <item>
+      <title>ps2avrGB RGB Controller (ATtiny85-20SU)</title>
+      <link>https://blog.winkeyless.kr/227/</link>
+      <pubDate>Sun, 12 Apr 2020 11:47:00 +0900</pubDate>
+      <guid>https://blog.winkeyless.kr/227/</guid>
+      <description>&lt;h1 id=&#34;키보드-펌웨어가-아닙니다-부트맵퍼를-이용해서-업로드하지-마세요&#34;&gt;키보드 펌웨어가 아닙니다. 부트맵퍼를 이용해서 업로드하지 마세요!!&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;h2 id=&#34;-설치업로드는-반드시-isp로더를-이용해야-합니다&#34;&gt;* 설치(업로드)는 반드시 ISP로더를 이용해야 합니다.&lt;/h2&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;ps2avrGB 의 RGB LED 를 작동 시키는 펌웨어입니다.&lt;/p&gt;
+&lt;p&gt;MCU 는 ATtiny85-20SU 입니다.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.winkeyless.kr/227/attachments/ps2avrGB_rgb_controller_20200412.zip&#34;&gt;ps2avrGB_rgb_controller_20200412.zip&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Bootmapper Client 업데이트</title>
       <link>https://blog.winkeyless.kr/218/</link>
       <pubDate>Sat, 21 May 2016 14:51:58 +0900</pubDate>
